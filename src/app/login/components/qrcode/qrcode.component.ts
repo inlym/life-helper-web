@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { QrcodeService } from './qrcode.service'
 
 @Component({
   selector: 'app-qrcode',
@@ -6,7 +7,15 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrcodeComponent implements OnInit {
-  constructor() {}
+  url: string = ''
+  code: string = ''
 
-  ngOnInit(): void {}
+  constructor(private qrcodeService: QrcodeService) {}
+
+  ngOnInit(): void {
+    this.qrcodeService.getQrcode().subscribe((data: any) => {
+      this.url = data.url
+      this.code = data.code
+    })
+  }
 }
