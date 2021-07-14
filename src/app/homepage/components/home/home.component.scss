@@ -1,8 +1,11 @@
-.one {
-  height: 500px;
-  width: 500px;
-  position: absolute;
-  top: calc(50% - 250px);
-  left: calc(50% - 250px);
-  border: 1px solid red;
+.nav {
+  height: 60px;
+
+  .home {
+    color: #fff;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
 }

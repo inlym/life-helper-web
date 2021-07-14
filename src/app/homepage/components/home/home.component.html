@@ -1,1 +1,8 @@
-<div class="one">这是首页</div>
+<mat-toolbar class="nav" color="primary">
+  <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+    <mat-icon class="home">home</mat-icon>
+  </button>
+  <span>我的个人助手</span>
+  <span class="spacer"></span>
+  <button mat-button [routerLink]="['/login']">登 录</button>
+</mat-toolbar>
