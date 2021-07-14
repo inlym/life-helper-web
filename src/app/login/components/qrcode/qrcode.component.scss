@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(125deg, #f44336, #e91e63, #9c27b0, #3f51b5, #2196f3);
+  background-size: 400%;
+  overflow: hidden;
+  animation: bganimation 10s infinite;
+
+  @keyframes bganimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.login-box {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #fff;
+
+  padding: 50px 0 120px;
+
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 200px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .qrcode {
+    width: 270px;
+    height: 270px;
+  }
+
+  .title {
+    margin-top: 40px;
+    color: #353535;
+    font-size: 20px;
+  }
+
+  .desc {
+    margin-top: 40px;
+    color: #a3a3a3;
+    font-size: 15px;
+  }
+}
