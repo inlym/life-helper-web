@@ -9,6 +9,8 @@ import { QrcodeService } from './qrcode.service'
 export class QrcodeComponent implements OnInit {
   url: string = ''
   code: string = ''
+  querying: boolean = false
+  timer: number = 0
 
   constructor(private qrcodeService: QrcodeService) {}
 
@@ -16,6 +18,35 @@ export class QrcodeComponent implements OnInit {
     this.qrcodeService.getQrcode().subscribe((data: any) => {
       this.url = data.url
       this.code = data.code
+
+      localStorage.setItem('url', this.url)
+      localStorage.setItem('code', this.code)
+
+      this.querying = true
+      this.startQuery()
     })
+  }
+
+  query() {
+    this.qrcodeService.query(this.code).subscribe((data: any) => {
+      const { status } = data
+
+      if (status === 0) {
+        console.log('未扫码')
+      } else if (status === 1) {
+        console.log('已扫码，未登录')
+      } else if (status === 2) {
+        console.log('已登录')
+        console.log('获取 `token` => ' + data.token)
+        this.querying = false
+        clearInterval(this.timer)
+      }
+    })
+  }
+
+  startQuery() {
+    this.timer = setInterval(() => {
+      this.query()
+    }, 1000)
   }
 }
