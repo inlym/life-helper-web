@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": ["crypto-js"],
+            "allowedCommonJsDependencies": ["crypto-js", "life-helper-frontend-config"],
             "outputPath": "dist/life-helper-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
