@@ -7,6 +7,7 @@ import { QrcodeService } from './qrcode.service'
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrcodeComponent implements OnInit {
+  status: number = 0
   url: string = ''
   code: string = ''
   querying: boolean = false
@@ -15,6 +16,11 @@ export class QrcodeComponent implements OnInit {
   constructor(private qrcodeService: QrcodeService) {}
 
   ngOnInit(): void {
+    this.init()
+  }
+
+  /** 页面初始化 */
+  init() {
     this.qrcodeService.getQrcode().subscribe((data: any) => {
       this.url = data.url
       this.code = data.code
@@ -29,7 +35,8 @@ export class QrcodeComponent implements OnInit {
 
   query() {
     this.qrcodeService.query(this.code).subscribe((data: any) => {
-      const { status } = data
+      const { status, token } = data
+      this.status = status
 
       if (status === 0) {
         console.log('未扫码')
@@ -38,6 +45,7 @@ export class QrcodeComponent implements OnInit {
       } else if (status === 2) {
         console.log('已登录')
         console.log('获取 `token` => ' + data.token)
+        localStorage.setItem('token', token)
         this.querying = false
         clearInterval(this.timer)
       }
