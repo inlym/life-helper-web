@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { AuthInterceptor } from './common/auth.interceptor'
-import { SignatureInterceptor } from './common/signature.interceptor'
-import { UrlInterceptor } from './common/url.interceptor'
+import { AuthInterceptor } from './common/interceptors/auth.interceptor'
+import { SignatureInterceptor } from './common/interceptors/signature.interceptor'
+import { UrlInterceptor } from './common/interceptors/url.interceptor'
 
 @NgModule({
   declarations: [AppComponent],
