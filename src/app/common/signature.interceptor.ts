@@ -75,8 +75,7 @@ export class SignatureInterceptor implements HttpInterceptor {
       if (!headersNew.getAll(key) || !headersNew.get(key)) {
         return headersNew.delete(key)
       } else {
-        // 下面的 `|| []` 实际上是多余的，为了应付类型检查
-        return headersNew.set(key.toLowerCase(), headersNew.getAll(key) || [])
+        return headersNew.set(key.toLowerCase(), headersNew.getAll(key)!)
       }
     }, headers)
   }
@@ -88,8 +87,8 @@ export class SignatureInterceptor implements HttpInterceptor {
     return headers
       .set('x-ca-key', this.key)
       .set('x-ca-timestamp', Date.now().toString())
-      .set('accept', headers.getAll('accept') ? headers.getAll('accept') || [] : '*/*')
-      .set('content-type', headers.getAll('content-type') ? headers.getAll('content-type') || [] : 'application/json')
+      .set('accept', headers.getAll('accept') ? headers.getAll('accept')! : '*/*')
+      .set('content-type', headers.getAll('content-type') ? headers.getAll('content-type')! : 'application/json')
       .set('x-ca-nonce', MD5((Date.now() + Math.random()).toString()).toString(enc.Hex))
   }
 
@@ -144,7 +143,7 @@ export class SignatureInterceptor implements HttpInterceptor {
     keys.forEach((key) => {
       if (headers.getAll(key)) {
         // `|| ''` 这个也是为了应付类型检查
-        list.push(headers.getAll(key)?.join(',') || '')
+        list.push(headers.getAll(key)?.join(',')!)
       }
       list.push(LF)
     })
