@@ -48,6 +48,8 @@ export class QrcodeComponent implements OnInit {
         localStorage.setItem('token', token)
         this.querying = false
         clearInterval(this.timer)
+        localStorage.removeItem('url')
+        localStorage.removeItem('code')
       }
     })
   }

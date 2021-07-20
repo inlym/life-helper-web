@@ -1,3 +1,4 @@
+/** 这个盒子只处理了背景色 */
 .container {
   position: relative;
   height: 100vh;
@@ -19,6 +20,7 @@
   }
 }
 
+/** 正中间的盒子 */
 .login-box {
   width: 400px;
   height: 500px;
@@ -36,20 +38,35 @@
   justify-content: flex-start;
   align-items: center;
 
-  .qrcode {
-    width: 270px;
-    height: 270px;
+  .title {
+    color: #353535;
+    font-size: 26px;
+    margin-bottom: 40px;
   }
 
-  .title {
-    margin-top: 40px;
-    color: #353535;
-    font-size: 20px;
+  .qrcode {
+    width: 250px;
+    height: 250px;
+  }
+
+  .success {
+    width: 270px;
+    height: 270px;
+    padding: 50px;
+
+    .icon {
+      font-size: 70px;
+      color: green;
+    }
+
+    .success-tip {
+      font-size: 20px;
+    }
   }
 
   .desc {
-    margin-top: 40px;
+    margin-top: 50px;
     color: #a3a3a3;
-    font-size: 15px;
+    font-size: 20px;
   }
 }

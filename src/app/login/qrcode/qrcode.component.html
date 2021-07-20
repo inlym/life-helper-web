@@ -1,22 +1,28 @@
 <div class="container">
   <!-- 未扫码情况 -->
   <div class="login-box" *ngIf="status === 0">
+    <div class="title">扫码登录</div>
     <img class="qrcode" [src]="url" />
-    <div class="title">使用手机微信扫码登录</div>
-    <div class="desc">扫码后将打开「我的个人助手」小程序进行登录确认</div>
+    <div class="desc">打开手机微信使用「扫一扫」</div>
   </div>
 
   <!-- 已扫码，未确认情况 -->
   <div class="login-box" *ngIf="status === 1">
-    <img class="qrcode" [src]="url" />
-    <div class="title">等待登录确认</div>
-    <div class="desc">你已扫码，请点击「登录」</div>
+    <div class="title">扫码登录</div>
+    <div class="success flex-column">
+      <div class="icon iconfont icon-done2-outline"></div>
+      <div class="success-tip">扫描成功</div>
+    </div>
+    <div class="desc">请在手机上「确认登录」</div>
   </div>
 
   <!-- 已确认情况 -->
   <div class="login-box" *ngIf="status === 2">
-    <img class="qrcode" [src]="url" />
-    <div class="title">登录成功</div>
-    <div class="desc">你已登录成功</div>
+    <div class="title">扫码登录</div>
+    <div class="success flex-column">
+      <div class="icon iconfont icon-done2-filled"></div>
+      <div class="success-tip">登录成功</div>
+    </div>
+    <div class="desc">即将跳转登录前页面</div>
   </div>
 </div>

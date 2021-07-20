@@ -13,3 +13,19 @@ body {
 div {
   box-sizing: border-box;
 }
+
+/** 横排均匀分布 */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/** 竖排均匀分布 */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
