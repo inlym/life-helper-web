@@ -15,8 +15,12 @@ export class QrcodeComponent implements OnInit {
 
   constructor(private qrcodeService: QrcodeService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.init()
+  }
+
+  ngOnDestroy() {
+    this.stopQuery()
   }
 
   /** 页面初始化 */
@@ -46,10 +50,7 @@ export class QrcodeComponent implements OnInit {
         console.log('已登录')
         console.log('获取 `token` => ' + data.token)
         localStorage.setItem('token', token)
-        this.querying = false
-        clearInterval(this.timer)
-        localStorage.removeItem('url')
-        localStorage.removeItem('code')
+        this.stopQuery()
       }
     })
   }
@@ -58,5 +59,12 @@ export class QrcodeComponent implements OnInit {
     this.timer = setInterval(() => {
       this.query()
     }, 1000)
+  }
+
+  stopQuery() {
+    this.querying = false
+    clearInterval(this.timer)
+    localStorage.removeItem('url')
+    localStorage.removeItem('code')
   }
 }
