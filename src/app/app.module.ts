@@ -7,10 +7,11 @@ import { AppComponent } from './app.component'
 import { AuthInterceptor } from './common/interceptors/auth.interceptor'
 import { SignatureInterceptor } from './common/interceptors/signature.interceptor'
 import { UrlInterceptor } from './common/interceptors/url.interceptor'
+import { CoreModule } from './core/core.module'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule, CoreModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: UrlInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
