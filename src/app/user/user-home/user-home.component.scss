@@ -1,0 +1,21 @@
+.profile {
+  width: 300px;
+  height: 260px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  .avatar {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+}

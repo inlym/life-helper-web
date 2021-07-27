@@ -4,10 +4,13 @@
     <div class="name">我的个人助手</div>
   </div>
 
-  <div class="item" [routerLink]="['/']" routerLinkActive="active">首页</div>
+  <div class="item" [routerLink]="['/']">首页</div>
   <div class="item">天气</div>
   <div class="item">日程</div>
+  <div class="item" [routerLink]="['/user']" routerLinkActive="active">个人中心</div>
 
   <div class="gap"></div>
-  <div class="item" [routerLink]="['/login']">登录</div>
+
+  <div *ngIf="!logged" class="item" [routerLink]="['/login']">登 录</div>
+  <img *ngIf="logged" class="avatar" [src]="avatarUrl" alt="用户头像" [routerLink]="['/user']" />
 </div>

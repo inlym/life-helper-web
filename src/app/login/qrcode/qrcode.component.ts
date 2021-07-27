@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 import { QrcodeService } from './qrcode.service'
 
 @Component({
@@ -13,7 +14,7 @@ export class QrcodeComponent implements OnInit {
   querying: boolean = false
   timer: number = 0
 
-  constructor(private qrcodeService: QrcodeService) {}
+  constructor(private readonly qrcodeService: QrcodeService, private readonly router: Router) {}
 
   ngOnInit() {
     this.init()
@@ -39,7 +40,7 @@ export class QrcodeComponent implements OnInit {
 
   query() {
     this.qrcodeService.query(this.code).subscribe((data: any) => {
-      const { status, token } = data
+      const { status, token, avatarUrl, nickName } = data
       this.status = status
 
       if (status === 0) {
@@ -50,7 +51,13 @@ export class QrcodeComponent implements OnInit {
         console.log('已登录')
         console.log('获取 `token` => ' + data.token)
         localStorage.setItem('token', token)
+        localStorage.setItem('nickName', nickName)
+        localStorage.setItem('avatarUrl', avatarUrl)
+
         this.stopQuery()
+        setTimeout(() => {
+          this.router.navigate(['user'])
+        }, 1000)
       }
     })
   }

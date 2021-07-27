@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-user-home',
+  templateUrl: './user-home.component.html',
+  styleUrls: ['./user-home.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class UserHomeComponent implements OnInit {
   /** 用户昵称 */
   nickName: string = ''
 
