@@ -21,6 +21,7 @@
     "@angular/router": "~12.1.1",
     "crypto-js": "^3.3.0",
     "life-helper-frontend-config": "^1.2.3",
+    "ng-zorro-antd": "^12.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

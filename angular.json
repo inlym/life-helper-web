@@ -27,8 +27,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.scss", "src/styles/iconfont/iconfont.css"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              { "glob": "**/*", "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/", "output": "/assets/" }
+            ],
+            "styles": ["src/styles.scss", "src/styles/iconfont/iconfont.css", "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"],
             "scripts": []
           },
           "configurations": {
@@ -92,7 +96,7 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "src/styles.scss"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
