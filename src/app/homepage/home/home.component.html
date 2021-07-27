@@ -1,3 +1,7 @@
 <app-header></app-header>
 
-<!-- <app-weather-daily [list]="weather.f15d"></app-weather-daily> -->
+<nz-carousel nzAutoPlay nzDots class="banner">
+  <div nz-carousel-content *ngFor="let banner of banners">
+    <img [src]="banner" alt="banner" />
+  </div>
+</nz-carousel>

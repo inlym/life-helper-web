@@ -7,15 +7,9 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  weather: any
+  banners: string[] = ['https://static.lifehelper.com.cn/banner/2021-07-27-23-01-15.gif', 'https://static.lifehelper.com.cn/banner/2021-07-27-23-07-08.gif']
 
-  constructor(private readonly http: HttpClient) {
-    console.log('---')
-  }
+  constructor(private readonly http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.http.get('/weather/common').subscribe((data) => {
-      this.weather = data
-    })
-  }
+  ngOnInit() {}
 }
