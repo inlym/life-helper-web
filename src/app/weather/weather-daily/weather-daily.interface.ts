@@ -1,0 +1,35 @@
+export interface WeatherDailyItem {
+  aqi?: any
+  cloud: string
+  date: string
+  dateText: string
+  dayText: string
+  humidity: string
+  iconDay: string
+  iconDayUrl: string
+  iconNight: string
+  iconNightUrl: string
+  imageUrl: string
+  moonPhase: string
+  moonrise: string
+  moonset: string
+  precip: string
+  pressure: string
+  sunrise: string
+  sunset: string
+  tempMax: string
+  tempMin: string
+  text: string
+  textDay: string
+  textNight: string
+  uvIndex: string
+  vis: string
+  wind360Day: string
+  wind360Night: string
+  windDirDay: string
+  windDirNight: string
+  windScaleDay: string
+  windScaleNight: string
+  windSpeedDay: string
+  windSpeedNight: string
+}

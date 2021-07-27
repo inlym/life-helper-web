@@ -1,0 +1,16 @@
+.container {
+  height: 500px;
+  width: 1600px;
+
+  border: 1px solid red;
+
+  .item {
+    width: 100px;
+    border: 1px solid blue;
+
+    img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
