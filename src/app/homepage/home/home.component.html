@@ -1,0 +1,12 @@
+<mat-toolbar class="nav" color="primary">
+  <div class="container">
+    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+      <mat-icon class="home">home</mat-icon>
+    </button>
+    <span>我的个人助手</span>
+    <span class="spacer"></span>
+    <button mat-button [routerLink]="['/login']">登 录</button>
+  </div>
+</mat-toolbar>
+
+<app-weather-daily [list]="weather.f15d"></app-weather-daily>
