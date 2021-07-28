@@ -5,5 +5,7 @@
   "parser": "@typescript-eslint/parser",
   "extends": ["plugin:@typescript-eslint/recommended"],
   "plugins": ["@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": 0
+  }
 }
