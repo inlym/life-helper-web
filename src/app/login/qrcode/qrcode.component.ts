@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { LoggerService } from 'src/app/core/services/logger.service'
 import { QrcodeService } from './qrcode.service'
 
 @Component({
@@ -8,24 +9,24 @@ import { QrcodeService } from './qrcode.service'
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrcodeComponent implements OnInit {
-  status: number = 0
-  url: string = ''
-  code: string = ''
-  querying: boolean = false
-  timer: number = 0
+  status = 0
+  url = ''
+  code = ''
+  querying = false
+  timer = 0
 
-  constructor(private readonly qrcodeService: QrcodeService, private readonly router: Router) {}
+  constructor(private readonly qrcodeService: QrcodeService, private readonly router: Router, private readonly logger: LoggerService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.init()
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.stopQuery()
   }
 
   /** 页面初始化 */
-  init() {
+  init(): void {
     this.qrcodeService.getQrcode().subscribe((data: any) => {
       this.url = data.url
       this.code = data.code
@@ -38,18 +39,18 @@ export class QrcodeComponent implements OnInit {
     })
   }
 
-  query() {
+  query(): void {
     this.qrcodeService.query(this.code).subscribe((data: any) => {
       const { status, token, avatarUrl, nickName } = data
       this.status = status
 
       if (status === 0) {
-        console.log('未扫码')
+        this.logger.debug('未扫码')
       } else if (status === 1) {
-        console.log('已扫码，未登录')
+        this.logger.debug('已扫码，未登录')
       } else if (status === 2) {
-        console.log('已登录')
-        console.log('获取 `token` => ' + data.token)
+        this.logger.info('已登录')
+        this.logger.info('获取 `token` => ' + data.token)
         localStorage.setItem('token', token)
         localStorage.setItem('nickName', nickName)
         localStorage.setItem('avatarUrl', avatarUrl)
@@ -62,13 +63,13 @@ export class QrcodeComponent implements OnInit {
     })
   }
 
-  startQuery() {
+  startQuery(): void {
     this.timer = setInterval(() => {
       this.query()
     }, 1000)
   }
 
-  stopQuery() {
+  stopQuery(): void {
     this.querying = false
     clearInterval(this.timer)
     localStorage.removeItem('url')
