@@ -3,7 +3,6 @@
  * 先简单弄一个，后面再优化
  */
 
-import { Injectable } from '@angular/core'
 import { environment } from 'src/environments/environment'
 
 export interface LoggingOptions {
@@ -12,16 +11,19 @@ export interface LoggingOptions {
 }
 
 /**
- * 日志服务
+ * 日志服务（非单例服务）
  *
  * @description
+ * ```js
+ * // 必须使用以下方式导入
+ * const logger = new Logger('prefix')
+ * ```
  */
-@Injectable({ providedIn: 'root' })
-export class LoggerService {
+export class Logger {
   /** 是否为生产环境 */
   private readonly isProd: boolean = environment.production
 
-  constructor() {
+  constructor(private prefix?: string) {
     // empty
   }
 
@@ -69,7 +71,8 @@ export class LoggerService {
   private makeLog(options: LoggingOptions): void {
     if (this.isValid()) {
       const time = new Date().toISOString()
-      const sentence = `${time} ${options.type.toUpperCase()} ${options.message}`
+      const prefix = this.prefix ? `[${this.prefix}] ` : ''
+      const sentence = `${time} ${options.type.toUpperCase()} ${prefix}${options.message}`
 
       if (options.type === 'debug') {
         console.log(sentence)

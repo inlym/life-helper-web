@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
-import { LoggerService } from 'src/app/core/services/logger.service'
 import { QrcodeService } from './qrcode.service'
+import { Logger } from 'src/app/core/services/logger'
 
 @Component({
   selector: 'app-qrcode',
@@ -9,13 +9,15 @@ import { QrcodeService } from './qrcode.service'
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrcodeComponent implements OnInit {
+  private readonly logger = new Logger(QrcodeComponent.name)
+
   status = 0
   url = ''
   code = ''
   querying = false
   timer = 0
 
-  constructor(private readonly qrcodeService: QrcodeService, private readonly router: Router, private readonly logger: LoggerService) {}
+  constructor(private readonly qrcodeService: QrcodeService, private readonly router: Router) {}
 
   ngOnInit(): void {
     this.init()
