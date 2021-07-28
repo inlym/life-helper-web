@@ -1,5 +1,5 @@
 {
-  "$schema": "./node_modules\\@angular/cli/lib/config/schema.json",
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,11 +27,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              { "glob": "**/*", "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/", "output": "/assets/" }
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss", "src/styles/iconfont/iconfont.css", "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"],
             "scripts": []
           },
