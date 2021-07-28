@@ -25,8 +25,6 @@ export class LoginedGuard implements CanActivate {
     }
 
     // 未登录情况
-    this.logger.debug(route.toString())
-    this.logger.debug(state.toString())
     this.router.navigate(['/login'])
     return false
   }

@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core'
 import { StorageKey } from '../enums/storage-key.enum'
+import { Logger } from './logger'
 
 /**
  * 用户登录状态管理
  */
 @Injectable({ providedIn: 'root' })
 export class AccountService {
+  private readonly logger = new Logger(AccountService.name)
+
   constructor() {
     // 空
   }
@@ -34,8 +37,13 @@ export class AccountService {
     const token = localStorage.getItem(StorageKey.Token)
     const deadlineStr = localStorage.getItem(StorageKey.TokenExpiration)
 
-    if (token && deadlineStr && Number(deadlineStr) > Date.now()) {
-      return true
+    if (token && deadlineStr) {
+      if (Number(deadlineStr) > Date.now()) {
+        return true
+      } else {
+        // 登录态已过期
+        this.clearSession()
+      }
     }
 
     return false
@@ -48,6 +56,13 @@ export class AccountService {
    * 1. 清空缓存中的登录状态。
    */
   logout(): void {
+    this.clearSession()
+  }
+
+  /**
+   * 清除登录态
+   */
+  clearSession(): void {
     localStorage.removeItem(StorageKey.Token)
     localStorage.removeItem(StorageKey.TokenExpiration)
   }
