@@ -69,10 +69,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "life-helper-frontend:build:production"
+              "browserTarget": "life-helper-frontend:build:production",
+              "disableHostCheck": true
             },
             "development": {
-              "browserTarget": "life-helper-frontend:build:development"
+              "browserTarget": "life-helper-frontend:build:development",
+              "disableHostCheck": true
             }
           },
           "defaultConfiguration": "development"
