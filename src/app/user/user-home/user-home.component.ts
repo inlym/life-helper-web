@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { UserHomeService } from './user-home.service'
 
 @Component({
   selector: 'app-user-home',
@@ -7,24 +8,25 @@ import { Component, OnInit } from '@angular/core'
 })
 export class UserHomeComponent implements OnInit {
   /** 用户昵称 */
-  nickName: string = ''
+  nickName = ''
 
   /** 用户头像 */
-  avatarUrl: string = ''
+  avatarUrl = ''
 
   /** 是否已登录 */
-  logged: boolean = false
+  logged = false
 
-  constructor() {}
+  constructor(private readonly userHomeService: UserHomeService) {}
 
   /** 初始化函数 */
-  init() {
-    this.nickName = localStorage.getItem('nickName') || ''
-    this.avatarUrl = localStorage.getItem('avatarUrl') || ''
-    this.logged = !!localStorage.getItem('token')
+  init(): void {
+    this.userHomeService.getBasicUserInfo().subscribe((data) => {
+      this.nickName = data.nickName
+      this.avatarUrl = data.avatarUrl
+    })
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.init()
   }
 }
