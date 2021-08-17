@@ -1,43 +1,53 @@
 .header {
-  height: 64px;
-  padding: 0 20px 0 40px;
-  background-color: #1976d2;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  color: #909090;
+  z-index: 250;
 
-  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.2s;
 
-  .brand {
-    margin-right: 100px;
-    .name {
-      font-size: 20px;
+  .main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .brand {
+      margin-right: 100px;
+      cursor: pointer;
+
+      .name {
+        color: #07c161;
+        font-size: 20px;
+        font-weight: bold;
+      }
     }
-  }
 
-  .item {
-    cursor: pointer;
-    height: 34px;
-    line-height: 34px;
-    padding: 0 20px;
-    border-radius: 4px;
-    margin: 0 5px;
-  }
+    .item {
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0 20px;
+      border-radius: 4px;
+      margin: 0 5px;
+    }
 
-  .active,
-  .item:hover {
-    background-color: #3b8ad9;
-  }
+    .active,
+    .item:hover {
+      color: #007fff;
+    }
 
-  .gap {
-    flex-grow: 1;
-  }
+    .gap {
+      flex-grow: 1;
+    }
 
-  .avatar {
-    height: 44px;
-    width: 44px;
-    border-radius: 50%;
+    .avatar {
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+    }
   }
 }

@@ -1,28 +1,30 @@
 <!-- 顶部导航栏 -->
 <div class="header">
-  <div class="brand">
-    <div class="name">我的个人助手</div>
-  </div>
+  <div class="main container">
+    <div class="brand" [routerLink]="['/']">
+      <div class="name">我的个人助手</div>
+    </div>
 
-  <div class="item" [routerLink]="['/']">首页</div>
-  <div class="item">天气</div>
-  <div class="item">日程</div>
-  <div class="item" [routerLink]="['/user']" routerLinkActive="active">个人中心</div>
+    <div class="item" [routerLink]="['/']">首页</div>
+    <div class="item">天气</div>
+    <div class="item">日程</div>
+    <div class="item" [routerLink]="['/user']" routerLinkActive="active">个人中心</div>
 
-  <div class="gap"></div>
+    <div class="gap"></div>
 
-  <div *ngIf="!logged" class="item" [routerLink]="['/login']">登 录</div>
-  <div *ngIf="logged" nz-dropdown [nzDropdownMenu]="menu">
-    <img class="avatar" [src]="avatarUrl" alt="用户头像" />
-    <nz-dropdown-menu #menu="nzDropdownMenu">
-      <ul nz-menu>
-        <li nz-menu-item>个人中心</li>
-        <li nz-menu-item>设置</li>
-        <li nz-menu-divider></li>
-        <li nz-menu-item nzDanger nz-popconfirm nzPopconfirmTitle="是否确认退出登录？" nzOkText="确认退出" nzCancelText="继续使用" (nzOnConfirm)="logout()">
-          退出登录
-        </li>
-      </ul>
-    </nz-dropdown-menu>
+    <div *ngIf="!logged" class="item" [routerLink]="['/login']">登 录</div>
+    <div *ngIf="logged" nz-dropdown [nzDropdownMenu]="menu">
+      <img class="avatar" [src]="avatarUrl" alt="用户头像" />
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu>
+          <li nz-menu-item>个人中心</li>
+          <li nz-menu-item>设置</li>
+          <li nz-menu-divider></li>
+          <li nz-menu-item nzDanger nz-popconfirm nzPopconfirmTitle="是否确认退出登录？" nzOkText="确认退出" nzCancelText="继续使用" (nzOnConfirm)="logout()">
+            退出登录
+          </li>
+        </ul>
+      </nz-dropdown-menu>
+    </div>
   </div>
 </div>
