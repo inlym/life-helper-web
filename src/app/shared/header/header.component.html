@@ -12,7 +12,8 @@
 
     <div class="gap"></div>
 
-    <div *ngIf="!logged" class="item" [routerLink]="['/login']">登 录</div>
+    <div *ngIf="!logged" class="item login-button" [routerLink]="['/login']">登录</div>
+
     <div *ngIf="logged" nz-dropdown [nzDropdownMenu]="menu">
       <img class="avatar" [src]="avatarUrl" alt="用户头像" />
       <nz-dropdown-menu #menu="nzDropdownMenu">

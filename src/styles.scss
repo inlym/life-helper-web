@@ -29,6 +29,17 @@ div {
   max-width: 960px;
 }
 
+/** 页面主内容区 */
+.main-body {
+  position: relative;
+  top: 70px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+}
+
 /** 横排均匀分布 */
 .flex-row {
   display: flex;

@@ -1,6 +1,6 @@
 .header {
   height: 60px;
-  background: #fff;
+  background-color: #fff;
   border-bottom: 1px solid #f1f1f1;
   color: #909090;
   z-index: 250;
@@ -33,6 +33,15 @@
       padding: 0 20px;
       border-radius: 4px;
       margin: 0 5px;
+      outline: none;
+    }
+
+    .login-button {
+      border: 1px solid #007fff;
+      background-color: #fff;
+      padding: 0.3rem 1.7rem;
+      color: #007fff;
+      line-height: 1.9rem;
     }
 
     .active,

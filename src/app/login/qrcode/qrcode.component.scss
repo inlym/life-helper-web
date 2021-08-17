@@ -1,72 +1,49 @@
-/** 这个盒子只处理了背景色 */
-.container {
-  position: relative;
-  height: 100vh;
-  background-image: linear-gradient(125deg, #f44336, #e91e63, #9c27b0, #3f51b5, #2196f3);
-  background-size: 400%;
-  overflow: hidden;
-  animation: bganimation 10s infinite;
+.main {
+  height: 960px;
 
-  @keyframes bganimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-}
+  /** 正中间的盒子 */
+  .login-box {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 300px);
 
-/** 正中间的盒子 */
-.login-box {
-  width: 400px;
-  height: 500px;
-  border-radius: 10px;
-  background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-  padding: 50px 0 120px;
-
-  position: absolute;
-  top: calc(50% - 250px);
-  left: calc(50% - 200px);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  .title {
-    color: #353535;
-    font-size: 26px;
-    margin-bottom: 40px;
-  }
-
-  .qrcode {
-    width: 250px;
-    height: 250px;
-  }
-
-  .success {
-    width: 270px;
-    height: 270px;
-    padding: 50px;
-
-    .icon {
-      font-size: 70px;
-      color: green;
+    .title {
+      color: #353535;
+      font-size: 26px;
+      margin-bottom: 40px;
     }
 
-    .success-tip {
+    .qrcode {
+      width: 250px;
+      height: 250px;
+    }
+
+    .success {
+      width: 270px;
+      height: 270px;
+      padding: 50px;
+
+      .icon {
+        font-size: 70px;
+        color: green;
+      }
+
+      .success-tip {
+        font-size: 20px;
+      }
+    }
+
+    .desc {
+      margin-top: 50px;
+      color: #a3a3a3;
       font-size: 20px;
     }
-  }
-
-  .desc {
-    margin-top: 50px;
-    color: #a3a3a3;
-    font-size: 20px;
   }
 }
