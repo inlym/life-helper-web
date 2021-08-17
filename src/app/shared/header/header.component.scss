@@ -12,6 +12,10 @@
   transition: all 0.2s;
 
   .main {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+
     display: flex;
     align-items: center;
     height: 100%;

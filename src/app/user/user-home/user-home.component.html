@@ -1,7 +1,11 @@
 <app-header></app-header>
 
-<!-- 用户个人资料，目前仅头像和昵称 -->
-<div class="profile flex-column">
-  <img [src]="avatarUrl" alt="用户头像" class="avatar" />
-  <div class="name">{{ nickName }}</div>
+<div class="main container">
+  <div class="menu main-box">
+    <div class="item" [routerLink]="['profile']" routerLinkActive="active">个人资料</div>
+    <div class="item">账号设置</div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

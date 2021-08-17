@@ -19,11 +19,22 @@ body {
 
 div {
   box-sizing: border-box;
+  outline: none;
 }
 
-// 主体内容容器
+ol,
+ul {
+  list-style: none;
+}
+li {
+  list-style-type: none;
+}
+
+// 包裹页面内容
+// 内容分多栏的用这个，单栏的用 `main-body`
 .container {
   position: relative;
+  top: 70px;
   margin: 0 auto;
   width: 100%;
   max-width: 960px;
