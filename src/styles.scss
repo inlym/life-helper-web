@@ -1,20 +1,71 @@
 @import '~ng-zorro-antd/ng-zorro-antd.min.css';
 
+// 全局变量设定
+:root {
+  // ─────  常用颜色  ─────
+  --RED: #fa5151;
+  --ORANGE: #fa9d3b;
+  --YELLOW: #ffc300;
+  --GREEN: #91d300;
+  --LIGHTGREEN: #95ec69;
+  --BRAND: #07c160;
+  --BLUE: #10aeff;
+  --INDIGO: #1485ee;
+  --PURPLE: #6467f0;
+
+  // 主题色
+  --theme-color: #07c160;
+
+  // ─────  字体颜色  ─────
+
+  // 默认字体颜色
+  --main-font-color: #353535;
+
+  // 描述性文本字体颜色
+  --desc-font-color: #9a9a9a;
+
+  // 链接文字颜色
+  --link-font-color: #576b95;
+
+  // 活跃文本字体颜色
+  --active-font-color: #007fff;
+
+  // ─────  背景色  ─────
+
+  // 全局背景色
+  --global-background-color: #f4f5f6;
+
+  // 活跃区域的小块背景色
+  --active-background-color: #f6f7f8;
+
+  // 用于划块分组等用途的小块区域背景色
+  --block-background-color: #f6f7f8;
+
+  // ─────  字体大小  ─────
+
+  --global-font-size: 14px;
+  --h1-font-size: 24px;
+  --h2-font-size: 20px;
+  --h3-font-size: 16px;
+  --h4-font-size: 16px;
+}
+
 html {
   height: 100%;
-  font-size: 12px;
   line-height: normal;
   font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', 'sans-serif', BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
     'Hiragino Sans GB', 'Microsoft YaHei', Arial;
   word-break: break-word;
   text-rendering: optimizeLegibility;
-  color: #333;
+  line-height: 1.6;
+  color: var(--font-main-color);
+  font-size: var(--global-font-size);
 }
 
 body {
   height: 100%;
   margin: 0;
-  background-color: #f4f5f5;
+  background-color: var(--global-background-color);
 }
 
 div {
@@ -26,6 +77,7 @@ ol,
 ul {
   list-style: none;
 }
+
 li {
   list-style-type: none;
 }
