@@ -3,6 +3,7 @@ import { Logger } from 'src/app/core/services/logger'
 import { StorageKey } from 'src/app/core/enums/storage-key.enum'
 import { AccountService } from 'src/app/core/services/account.service'
 import { NzMessageService } from 'ng-zorro-antd/message'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-header',
@@ -21,7 +22,7 @@ export class HeaderComponent implements OnInit {
   /** 是否已登录 */
   logged = false
 
-  constructor(private readonly accountService: AccountService, private readonly message: NzMessageService) {
+  constructor(private readonly accountService: AccountService, private readonly message: NzMessageService, private readonly router: Router) {
     //
   }
 
@@ -41,5 +42,10 @@ export class HeaderComponent implements OnInit {
     this.logged = false
 
     this.message.success('你已退出登录！')
+
+    // 跳转登录页
+    setTimeout(() => {
+      this.router.navigate(['login'])
+    }, 1000)
   }
 }

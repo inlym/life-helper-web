@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs'
 import { tap } from 'rxjs/operators'
-import { StorageKey } from 'src/app/core/enums/storage-key.enum'
 import { AccountService } from 'src/app/core/services/account.service'
 import { Logger } from 'src/app/core/services/logger'
 
@@ -42,6 +41,9 @@ export class QrcodeService {
 
   constructor(private readonly http: HttpClient, private readonly accountService: AccountService) {}
 
+  /**
+   * 获取用于扫码登录的小程序码信息
+   */
   getQrcode(): Observable<QrcodeDetail> {
     return this.http.get<QrcodeDetail>('/auth/qrcode').pipe(
       tap((data) => {
@@ -50,8 +52,20 @@ export class QrcodeService {
     )
   }
 
+  /**
+   * 查询小程序码对应的校验码（`code`）的状态
+   *
+   * @description
+   * 1. 查询的方式没有采用 WebSocket，而是轮询的方式去查询（目前为每隔 1s 查询一次）
+   *
+   * `status`
+   * [0] - 未扫码
+   * [1] - 已扫码，但是没有点击“确认登录”
+   * [2] - 已完成，并且已点击“确认登录”（终结态）
+   */
   query(): Observable<TokenDetail> {
     const code = this.code
+
     return this.http.get<TokenDetail>('/login/qrcode', { params: { code } }).pipe(
       tap((data) => {
         if (data.status === 0) {
@@ -60,9 +74,7 @@ export class QrcodeService {
           this.logger.debug('已扫码，未登录')
         } else if (data.status === 2) {
           this.logger.info('已登录')
-          this.accountService.login(data.token!, data.expiration!)
-          localStorage.setItem(StorageKey.AvatarUrl, data.avatarUrl!)
-          localStorage.setItem(StorageKey.NickName, data.nickName!)
+          this.accountService.login(data.token!, data.expiration!, { avatarUrl: data.avatarUrl, nickName: data.nickName })
         }
       })
     )

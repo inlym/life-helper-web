@@ -1,30 +1,25 @@
 <app-header></app-header>
 
-<div class="main-container main-box main">
-  <!-- 未扫码情况 -->
-  <div class="login-box" *ngIf="status === 0">
+<div class="container content-container content-block">
+  <div class="login-box central">
     <div class="title">扫码登录</div>
-    <img class="qrcode" [src]="url" />
-    <div class="desc">打开手机微信使用「扫一扫」</div>
-  </div>
 
-  <!-- 已扫码，未确认情况 -->
-  <div class="login-box" *ngIf="status === 1">
-    <div class="title">扫码登录</div>
-    <div class="success flex-column">
+    <!-- 未扫码情况 -->
+    <ng-container *ngIf="status === 0">
+      <img class="qrcode" [src]="url" alt="登录二维码" />
+      <div class="desc">请扫描以上二维码</div>
+    </ng-container>
+
+    <!-- 已扫码，未确认情况 -->
+    <ng-container *ngIf="status === 1">
       <div class="icon iconfont icon-done2-outline"></div>
-      <div class="success-tip">扫描成功</div>
-    </div>
-    <div class="desc">请在手机上「确认登录」</div>
-  </div>
+      <div class="desc">请在手机上「确认登录」</div>
+    </ng-container>
 
-  <!-- 已确认情况 -->
-  <div class="login-box" *ngIf="status === 2">
-    <div class="title">扫码登录</div>
-    <div class="success flex-column">
+    <!-- 已确认情况 -->
+    <ng-container *ngIf="status === 2">
       <div class="icon iconfont icon-done2-filled"></div>
-      <div class="success-tip">登录成功</div>
-    </div>
-    <div class="desc">即将跳转登录前页面</div>
+      <div class="desc">即将跳转登录前页面</div>
+    </ng-container>
   </div>
 </div>

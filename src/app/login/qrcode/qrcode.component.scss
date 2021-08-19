@@ -1,49 +1,35 @@
-.main {
+.container {
+  position: relative;
   height: 960px;
 
   /** 正中间的盒子 */
   .login-box {
-    height: 600px;
-    width: 600px;
-    position: absolute;
-    top: calc(50% - 300px);
-    left: calc(50% - 300px);
-
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 
+    height: 600px;
+    width: 600px;
+
     .title {
-      color: #353535;
       font-size: 26px;
-      margin-bottom: 40px;
+      margin: 40px;
     }
 
-    .qrcode {
-      width: 250px;
-      height: 250px;
-    }
-
-    .success {
-      width: 270px;
-      height: 270px;
-      padding: 50px;
-
-      .icon {
-        font-size: 70px;
-        color: green;
-      }
-
-      .success-tip {
-        font-size: 20px;
-      }
+    .qrcode,
+    .icon {
+      height: 240px;
+      width: 240px;
+      text-align: center;
+      line-height: 240px;
+      font-size: 100px;
+      color: var(--DARKGREEN);
     }
 
     .desc {
       margin-top: 50px;
-      color: #a3a3a3;
-      font-size: 20px;
+      color: var(--desc-font-color);
+      font-size: 16px;
     }
   }
 }
