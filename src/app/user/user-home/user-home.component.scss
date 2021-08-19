@@ -1,4 +1,4 @@
-.main {
+.user-home {
   display: flex;
   justify-content: space-between;
 
@@ -7,13 +7,9 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     font-size: 16px;
     padding: 10px;
-
-    background-color: #fff;
-    border: 1px solid #f1f1f1;
 
     .item {
       display: flex;
@@ -38,9 +34,6 @@
   .content {
     margin-left: 10px;
     flex-grow: 1;
-    height: 100%;
-    background-color: #fff;
-    border: 1px solid #f1f1f1;
-    padding: 20px;
+    padding: 0 20px 20px;
   }
 }
