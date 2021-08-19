@@ -15,7 +15,7 @@ export interface LoggingOptions {
  *
  * @description
  * ```js
- * // 必须使用以下方式导入
+ * // 必须使用以下方式导入，这里是特意设定成非 DI 的方式使用的
  * const logger = new Logger('prefix')
  * ```
  */
