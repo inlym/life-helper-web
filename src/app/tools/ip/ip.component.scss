@@ -1,3 +1,35 @@
 .main {
-  height: 400px;
+  padding: 20px;
+
+  .title {
+    height: 40px;
+    border-bottom: 1px solid #f1f1f1;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .desc {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .item {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #f1f1f1;
+    align-items: center;
+
+    .name {
+      width: 100px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #333;
+      text-align: left;
+      margin-right: 30px;
+    }
+  }
 }

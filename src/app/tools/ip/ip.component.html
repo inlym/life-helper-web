@@ -1,3 +1,51 @@
 <app-header></app-header>
 
-<div class="content-container content-block main"></div>
+<div class="content-container content-block main">
+  <div class="main">
+    <div class="title">IP 查询</div>
+
+    <div class="item">
+      <div class="name">你的 IP</div>
+      <div class="value">{{ clientIp }}</div>
+    </div>
+
+    <div class="desc">省市区信息</div>
+
+    <div class="item">
+      <div class="name">国家</div>
+      <div class="value">{{ address?.nation }}</div>
+    </div>
+
+    <div class="item">
+      <div class="name">省份</div>
+      <div class="value">{{ address?.province }}</div>
+    </div>
+
+    <div class="item">
+      <div class="name">城市</div>
+      <div class="value">{{ address?.city }}</div>
+    </div>
+
+    <div class="item">
+      <div class="name">区县</div>
+      <div class="value">{{ address?.district }}</div>
+    </div>
+
+    <div class="desc">经纬度坐标</div>
+
+    <div class="item">
+      <div class="name">经度</div>
+      <div class="value">{{ location?.longitude }}</div>
+    </div>
+
+    <div class="item">
+      <div class="name">纬度</div>
+      <div class="value">{{ location?.latitude }}</div>
+    </div>
+
+    <div class="desc">地图位置</div>
+    <div class="item">
+      <img [src]="mapUrl" alt="静态地图" />
+    </div>
+  </div>
+</div>
