@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
-import { WeatherDailyComponent } from './weather-daily/weather-daily.component'
 
 @NgModule({
-  declarations: [WeatherDailyComponent],
+  declarations: [],
   imports: [CommonModule],
-  exports: [WeatherDailyComponent],
+  exports: [],
 })
 export class WeatherModule {}
