@@ -27,9 +27,9 @@ life-helper-frontend
 ├── .gitignore                            # `Git` 的配置文件，用户控制不被 `Git` 跟踪的文件和目录
 ├── .prettierrc                           # `Prettier` 插件的配置文件，用于控制一致的代码风格
 ├── angular.json                          # Angular Cli 的配置文件，主要配置项目编译时的一些运行参数
-├── Dockerfile                            #
+├── Dockerfile                            # Docker 构建文件
 ├── package.jso n                         # 项目配置文件，主要用于记录使用的第三方依赖包和自定义脚本命令
 ├── README.md                             # 项目文档，用于对外展现项目基本介绍
-└── tsconfig.json                         # `TypeScript` 的配置文件
+└── tsconfig.json                         # `TypeScript` 配置文件
 
 ```
