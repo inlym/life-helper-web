@@ -29,7 +29,7 @@ life-helper-frontend
 ├── angular.json                          # Angular Cli 的配置文件，主要配置项目编译时的一些运行参数
 ├── Dockerfile                            # Docker 构建文件
 ├── package.jso n                         # 项目配置文件，主要用于记录使用的第三方依赖包和自定义脚本命令
-├── README.md                             # 项目文档，用于对外展现项目基本介绍
+├── README.md                             # 项目介绍文档，用于对外展现项目基本介绍
 └── tsconfig.json                         # `TypeScript` 配置文件
 
 ```
