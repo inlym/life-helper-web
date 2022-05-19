@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="user-home content-container">
+  <!-- 左侧菜单栏 -->
+  <div class="menu content-block">
+    <div class="item" [routerLink]="['profile']" routerLinkActive="active">个人资料</div>
+    <div class="item">账号设置</div>
+  </div>
+
+  <!-- 右侧内容区 -->
+  <div class="content content-block">
+    <router-outlet></router-outlet>
+  </div>
+</div>

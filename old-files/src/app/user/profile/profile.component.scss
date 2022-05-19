@@ -1,0 +1,32 @@
+.title {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #f1f1f1;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.profile {
+  .item {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #f1f1f1;
+    align-items: center;
+
+    .name {
+      width: 100px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #333;
+      text-align: left;
+      margin-right: 30px;
+    }
+
+    .avatar {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+}
