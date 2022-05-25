@@ -43,3 +43,4 @@ Thumbs.db
 
 # 自己新增的文件
 package-lock.json
+src/app/temp/*
