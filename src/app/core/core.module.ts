@@ -1,5 +1,8 @@
-import {NgModule, Optional, SkipSelf} from '@angular/core'
 import {CommonModule} from '@angular/common'
+import {NgModule, Optional, SkipSelf} from '@angular/core'
+import {FormsModule} from '@angular/forms'
+import {BrowserModule} from '@angular/platform-browser'
+import {AppRoutingModule} from '../app-routing.module'
 
 /**
  * 核心模块
@@ -9,7 +12,7 @@ import {CommonModule} from '@angular/common'
  */
 @NgModule({
   declarations: [],
-  imports: [CommonModule],
+  imports: [CommonModule, BrowserModule, FormsModule, AppRoutingModule],
 })
 export class CoreModule {
   /**
