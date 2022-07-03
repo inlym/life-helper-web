@@ -1,4 +1,6 @@
+import {HTTP_INTERCEPTORS} from '@angular/common/http'
 import {NgModule, Optional, SkipSelf} from '@angular/core'
+import {UrlConvertingInterceptor} from './interceptors/url-converting.interceptor'
 
 /**
  * 核心模块
@@ -8,6 +10,7 @@ import {NgModule, Optional, SkipSelf} from '@angular/core'
  */
 @NgModule({
   declarations: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: UrlConvertingInterceptor, multi: true}],
 })
 export class CoreModule {
   /**
