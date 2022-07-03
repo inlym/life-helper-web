@@ -1,9 +1,9 @@
 {
   "name": "life-helper-web",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -26,13 +26,21 @@
     "@angular-devkit/build-angular": "^14.0.4",
     "@angular/cli": "~14.0.4",
     "@angular/compiler-cli": "^14.0.0",
+    "@types/crypto-js": "^4.1.1",
     "@types/jasmine": "~4.0.0",
+    "@types/node": "^18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "prettier": "^2.7.1",
     "typescript": "~4.7.2"
   }
 }
