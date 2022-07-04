@@ -1,5 +1,6 @@
 import {HTTP_INTERCEPTORS} from '@angular/common/http'
 import {NgModule, Optional, SkipSelf} from '@angular/core'
+import {SignatureInterceptor} from './interceptors/signature.interceptor'
 import {UrlConvertingInterceptor} from './interceptors/url-converting.interceptor'
 
 /**
@@ -10,7 +11,10 @@ import {UrlConvertingInterceptor} from './interceptors/url-converting.intercepto
  */
 @NgModule({
   declarations: [],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: UrlConvertingInterceptor, multi: true}],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: UrlConvertingInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: SignatureInterceptor, multi: true},
+  ],
 })
 export class CoreModule {
   /**
