@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "crypto-js": "^4.1.1",
+    "life-helper-frontend-config": "^2.0.1",
     "ngx-logger": "^5.0.11",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
