@@ -12,11 +12,7 @@ import {CoreModule} from './core/core.module'
   imports: [
     BrowserModule,
     HttpClientModule,
-    LoggerModule.forRoot({
-      level: NgxLoggerLevel.TRACE,
-      serverLoggingUrl: '',
-      serverLogLevel: NgxLoggerLevel.DEBUG,
-    }),
+    LoggerModule.forRoot({level: NgxLoggerLevel.TRACE}),
     AppRoutingModule,
     CoreModule,
   ],
