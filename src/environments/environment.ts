@@ -10,5 +10,6 @@ export const environment = {
   /** 阿里云 API 网关签名密钥对 */
   key: k,
 
+  /** 阿里云 API 网关签名密钥对 */
   secret: s,
 }
