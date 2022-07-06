@@ -6,6 +6,7 @@ import {LoggerModule, NgxLoggerLevel} from 'ngx-logger'
 import {AppRoutingModule} from './app-routing.module'
 import {AppComponent} from './app.component'
 import {CoreModule} from './core/core.module'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import {CoreModule} from './core/core.module'
     LoggerModule.forRoot({level: NgxLoggerLevel.TRACE}),
     AppRoutingModule,
     CoreModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
