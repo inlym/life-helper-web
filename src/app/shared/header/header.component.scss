@@ -3,8 +3,6 @@
 }
 
 .header {
-  margin-bottom: 10px;
-
   // 导航栏高度
   --header-height: 60px;
 
@@ -21,6 +19,7 @@
     width: 100%;
     height: var(--header-height);
 
+    background-color: #fff;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 6%);
 
     .container {
@@ -29,6 +28,10 @@
       justify-content: space-between;
 
       width: 1296px;
+
+      .brand {
+        height: 40px;
+      }
     }
   }
 

@@ -1,5 +1,39 @@
-.one {
-  height: 400px;
+.banner {
+  position: relative;
 
-  background-color: bisque;
+  overflow: hidden;
+
+  height: 600px;
+
+  .content {
+    width: 1296px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 150px 200px;
+
+    color: #fff;
+
+    h1 {
+      font-size: 78px;
+    }
+
+    h2 {
+      font-size: 28px;
+
+      margin-top: 80px;
+      margin-left: 200px;
+    }
+  }
+
+  .video {
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
 }
