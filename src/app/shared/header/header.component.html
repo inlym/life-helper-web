@@ -1,13 +1,13 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>小鸣助手</span>
-    <span class="spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-    </button>
-</mat-toolbar>
+<div class="header">
+    <div class="nav">
+        <!-- 居中的容器，用来存放真正的展示元素 -->
+        <div class="container">
+            <div class="name">小鸣助手</div>
+            <div class="spacer"></div>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        </div>
+    </div>
+
+    <!-- 占位元素，填满 fixed 的元素的高度 -->
+    <div class="placeholder"></div>
+</div>

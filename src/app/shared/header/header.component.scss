@@ -1,3 +1,38 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.header {
+  margin-bottom: 10px;
+
+  // 导航栏高度
+  --header-height: 60px;
+
+  .nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: var(--header-height);
+
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 6%);
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 1296px;
+    }
+  }
+
+  .placeholder {
+    height: var(--header-height);
+  }
+}
