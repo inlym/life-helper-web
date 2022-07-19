@@ -23,6 +23,7 @@
     "crypto-js": "^4.1.1",
     "life-helper-frontend-config": "^2.0.1",
     "ngx-logger": "^5.0.11",
+    "normalize.css": "^8.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
