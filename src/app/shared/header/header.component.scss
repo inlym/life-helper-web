@@ -4,7 +4,7 @@
 
 .header {
   // 导航栏高度
-  --header-height: 60px;
+  --header-height: 52px;
 
   .nav {
     position: fixed;
@@ -19,8 +19,13 @@
     width: 100%;
     height: var(--header-height);
 
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 6%);
+    transition: background-color .5s cubic-bezier(.28, .11, .32, 1);
+    transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+
+    background-color: rgba(255, 255, 255, .72);
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 6%);
+
+    backdrop-filter: saturate(180%) blur(20px);
 
     .container {
       display: flex;
@@ -29,8 +34,19 @@
 
       width: 1296px;
 
-      .brand {
-        height: 40px;
+      .title {
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 1.14286;
+
+        display: block;
+        float: left;
+
+        height: 52px;
+        margin: 14px 0 -14px;
+        padding: 0;
+
+        letter-spacing: .011em;
       }
     }
   }
