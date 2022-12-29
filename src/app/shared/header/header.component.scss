@@ -5,15 +5,54 @@
   left: 0;
 
   width: 100%;
-  height: 80px;
+  height: var(--header-height);
 
   transition: all .5s linear;
 
   background-color: transparent;
+
+  --header-height: 70px;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 1296px;
+
+    .space {
+      flex: 1;
+    }
+
+    .left {
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .menus {
+      font-size: 18px;
+
+      display: flex;
+
+      .menu-item {
+        line-height: var(--header-height);
+
+        height: var(--header-height);
+        margin: 0 50px;
+        padding: 0 10px;
+      }
+
+      .active {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 // 滚动条距离顶部 >0px 情况，做了样式强化
-.active {
+.scrolled {
   background-color: var(--ming-BG-2);
   box-shadow: 0 10px 40px -15px rgb(64 90 163 / 20%);
 }
