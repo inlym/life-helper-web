@@ -14,6 +14,6 @@
 
 // 滚动条距离顶部 >0px 情况，做了样式强化
 .active {
-  background-color: #fff;
+  background-color: var(--ming-BG-2);
   box-shadow: 0 10px 40px -15px rgb(64 90 163 / 20%);
 }
