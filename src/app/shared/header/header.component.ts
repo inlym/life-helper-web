@@ -22,6 +22,9 @@ export class HeaderComponent implements OnInit {
    */
   public scrolled = false
 
+  /** logo 图片地址 */
+  public logoUrl = 'https://static.lifehelper.com.cn/static/project/logo.svg'
+
   constructor() {
     // 空
   }

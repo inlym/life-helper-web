@@ -9,7 +9,7 @@
   // 黄色
   --ming-YELLOW: #ffc300;
   // 绿色
-  --ming-GREEN: #91d300;
+  --ming-GREEN: #00c06c;
   // 浅绿色
   --ming-LIGHTGREEN: #95ec69;
   // 蓝色
@@ -59,4 +59,10 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// 通用页面容器（宽度最大的容器）
+.common-container {
+  width: 1280px;
+  margin: 0 auto;
 }
