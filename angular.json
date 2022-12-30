@@ -51,8 +51,8 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["./node_modules/normalize.css/normalize.css", "src/styles.scss"],
-            "scripts": [],
-            "allowedCommonJsDependencies": ["crypto-js", "life-helper-frontend-config"]
+            "allowedCommonJsDependencies": ["crypto-js"],
+            "scripts": []
           },
           "configurations": {
             "production": {
