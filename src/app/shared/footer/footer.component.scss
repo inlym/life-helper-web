@@ -1,0 +1,23 @@
+.footer {
+  font-size: 12px;
+  line-height: 30px;
+
+  height: 30px;
+
+  text-align: center;
+
+  color: var(--ming-TEXT-DESC);
+  background-color: var(--ming-BG-1);
+
+  span {
+    margin: 0 10px;
+  }
+
+  a {
+    color: var(--ming-TEXT-DESC);
+  }
+
+  a:hover {
+    color: var(--ming-TEXT-LINK);
+  }
+}
