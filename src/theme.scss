@@ -1,9 +1,87 @@
 @import '../node_modules/@angular/material/theming';
 
-@include mat-core();
-$custom-primary: mat-palette($mat-green, 600);
-$custom-accent: mat-palette($mat-pink);
-$custom-warn: mat-palette($mat-red);
-$custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
+// 绿色
+$ming-green-palette: (
+  50: #ecfaf4,
+  100: #daf6ea,
+  200: #c7f0df,
+  300: #82edc0,
+  400: #45de9d,
+  500: #0bd07d,
+  600: #00b96b,
+  700: #009456,
+  800: #00663b,
+  900: #003d23,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
 
-@include angular-material-theme($custom-theme);
+// 红色
+$ming-red-palette: (
+  50: #fdf1f3,
+  100: #fbe4e7,
+  200: #f8ced3,
+  300: #f1a2ab,
+  400: #ea7583,
+  500: #e4495b,
+  600: #df2a3f,
+  700: #ad1a2b,
+  800: #8f0515,
+  900: #70000d,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+// 蓝色
+$ming-blue-palette: (
+  50: #ecf4fd,
+  100: #d9eafc,
+  200: #c0ddfc,
+  300: #81bbf8,
+  400: #5fa8f6,
+  500: #2f8ef4,
+  600: #117cee,
+  700: #0c68ca,
+  800: #074a92,
+  900: #00346b,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+@include mat-core();
+$primary: mat-palette($ming-green-palette, 600);
+$accent: mat-palette($ming-blue-palette, 600);
+$warn: mat-palette($ming-red-palette, 600);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
