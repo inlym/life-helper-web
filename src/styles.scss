@@ -1,3 +1,5 @@
+@import './theme.scss';
+
 // 全局变量
 // 所有的变量均以 `--ming-` 前缀作为开头，避免在引入第三方变量时导致冲突
 :root {
@@ -41,9 +43,10 @@
   --ming-HEADER-HEIGHT: 60px;
 }
 
-html, body {
-  font-family: -apple-system-font, BlinkMacSystemFont, Roboto, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
-  "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+html,
+body {
+  font-family: -apple-system-font, BlinkMacSystemFont, Roboto, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei UI', 'Microsoft YaHei', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
@@ -51,7 +54,7 @@ html, body {
 
   height: 100%;
 
-  letter-spacing: -.022em;
+  letter-spacing: -0.022em;
 
   color: var(--ming-TEXT-MAIN);
   background-color: #fff;

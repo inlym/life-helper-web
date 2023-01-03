@@ -50,11 +50,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "./node_modules/normalize.css/normalize.css",
-              "src/styles.scss"
-            ],
+            "styles": ["./node_modules/normalize.css/normalize.css", "src/styles.scss"],
             "allowedCommonJsDependencies": ["crypto-js"],
             "scripts": []
           },
@@ -110,7 +106,7 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.scss"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
