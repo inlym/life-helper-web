@@ -1,6 +1,53 @@
 <!-- 顶部导航栏 -->
 <app-header></app-header>
 
-<div class="temp"></div>
+<div class="one">
+    <div class="content common-container">
+        <div class="left">
+            <div class="title">让<span class="name">小鸣助手</span>，成为你的随身管家</div>
+            <div class="desc">让生活更简单一些</div>
+            <div class="button">免费使用</div>
+        </div>
+        <div class="right one-center">
+            <img class="img" [src]="img1Url" />
+        </div>
+    </div>
+</div>
 
+<!-- 客户端设备信息 -->
+<div class="device">
+    <div class="content common-container">
+        <div class="title">随时随地，在各种设备上使用</div>
+        <div class="items">
+            <div class="item" *ngFor="let item of devices" (click)="onDeviceItemClick(item.type)">
+                <img [src]="item.imageUrl" class="img" />
+                <div class="desc">{{ item.desc }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 用户评价 -->
+<div class="customer">
+    <div class="content common-container">
+        <div class="title">20万+用户正在使用小鸣助手</div>
+        <div class="items">
+            <div class="item" *ngFor="let item of customers">
+                <img class="avatar" [src]="item.avatarUrl" />
+                <div class="name">{{ item.name }}</div>
+                <div class="desc">{{ item.desc }}</div>
+                <div class="cont">{{ item.content }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="two">
+    <div class="content common-container">
+        <div class="text">现在使用小鸣助手，开启智慧高效生活</div>
+        <div class="button">免费使用</div>
+    </div>
+</div>
+
+<!-- 页面底栏 -->
 <app-footer></app-footer>
