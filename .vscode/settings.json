@@ -1,0 +1,4 @@
+{
+  "csscomb.formatOnSave": true,
+  "csscomb.preset": "cssconfig.json"
+}
