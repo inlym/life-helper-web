@@ -5,13 +5,11 @@
   left: 0;
 
   width: 100%;
-  height: var(--header-height);
+  height: var(--ming-HEADER-HEIGHT);
 
   transition: all .5s linear;
 
   background-color: transparent;
-
-  --header-height: 70px;
 
   .header-content {
     display: flex;
@@ -42,9 +40,9 @@
       display: flex;
 
       .menu-item {
-        line-height: var(--header-height);
+        line-height: var(--ming-HEADER-HEIGHT);
 
-        height: var(--header-height);
+        height: var(--ming-HEADER-HEIGHT);
         margin: 0 50px;
         padding: 0 10px;
       }
