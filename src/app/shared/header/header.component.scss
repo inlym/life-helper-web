@@ -3,12 +3,9 @@
   z-index: 99;
   top: 0;
   left: 0;
-
   width: 100%;
   height: var(--ming-HEADER-HEIGHT);
-
   transition: all .5s linear;
-
   background-color: transparent;
 
   .header-content {
@@ -36,12 +33,10 @@
 
     .menus {
       font-size: 18px;
-
       display: flex;
 
       .menu-item {
         line-height: var(--ming-HEADER-HEIGHT);
-
         height: var(--ming-HEADER-HEIGHT);
         margin: 0 50px;
         padding: 0 10px;
@@ -56,6 +51,6 @@
 
 // 滚动条距离顶部 >0px 情况，做了样式强化
 .scrolled {
-  background-color: var(--ming-BG-2);
+  background-color: var(--ming-bg-2);
   box-shadow: 0 10px 40px -15px rgb(64 90 163 / 20%);
 }
