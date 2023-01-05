@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// 2023.01.06 实测结果备注
+// 使用自定义的调色板，在 `contrast` 中的颜色值完全未生效，同样代码放在 Angular v12 版本中是可以生效的。
+// 因此当前版本暂不使用自定义调色板，后续再改回来。
+
+$my-primary: mat.define-palette(mat.$green-palette, 600);
+$my-accent: mat.define-palette(mat.$pink-palette);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+  )
+);
+
+@include mat.all-component-themes($my-theme);
