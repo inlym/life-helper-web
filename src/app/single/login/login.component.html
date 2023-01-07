@@ -1,5 +1,13 @@
 <!-- 跟可视区域等高的容器 -->
 <div class="page-container">
     <!-- 有效内容区域 -->
-    <div class="content"></div>
+    <div class="content">
+        <a routerLink="/"><img class="logo" [src]="logoUrl" /></a>
+
+        <h2 class="name">小鸣助手</h2>
+        <div class="desc">使用微信扫码登录</div>
+        <div class="qrcode-area">
+            <img [src]="url" class="qrcode" />
+        </div>
+    </div>
 </div>

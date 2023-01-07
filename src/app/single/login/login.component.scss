@@ -1,7 +1,44 @@
 .page-container {
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fafafa;
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 460px;
+    height: 600px;
+    padding: 70px 80px;
+    border-radius: 10px;
+    background-color: var(--ming-white);
+    box-shadow: 0 4px 8px -4px rgb(0 0 0 / 13%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 12px 24px 16px rgb(0 0 0 / 4%);
+
+    .logo {
+      width: 40px;
+    }
+
+    .name {
+      font-size: 22px;
+      margin-top: 14px;
+      color: var(--ming-text-title);
+    }
+
+    .desc {
+      font-size: 16px;
+      margin-top: 6px;
+      color: var(--ming-text-para);
+    }
+
+    .qrcode-area {
+      position: relative;
+      margin-top: 50px;
+
+      .qrcode {
+        width: 200px;
+      }
+    }
+  }
 }

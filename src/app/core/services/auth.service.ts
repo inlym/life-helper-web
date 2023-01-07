@@ -12,3 +12,17 @@ export class AuthService {
     // 空
   }
 }
+
+/** 登录凭证 */
+export interface SecurityToken {
+  /** 鉴权令牌 */
+  token: string
+  /** 安全令牌类型 */
+  type: 'JSON_WEB_TOKEN' | 'SIMPLE_TOKEN'
+  /** 发起请求时，携带令牌的请求头名称 */
+  headerName: string
+  /** 创建时间 */
+  createTime: string
+  /** 过期时间 */
+  expireTime: string
+}

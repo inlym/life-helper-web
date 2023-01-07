@@ -7,6 +7,9 @@ import {LoginService} from './login.service'
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  /** logo 图片地址 */
+  public logoUrl = 'https://static.lifehelper.com.cn/static/project/logo.svg'
+
   /** 扫码登录票据 ID */
   public id = ''
 
@@ -22,7 +25,8 @@ export class LoginComponent implements OnInit {
   /** 页面初始化方法 */
   init(): void {
     this.loginService.getQrcode().subscribe((data) => {
-      console.log(data)
+      this.id = data.id
+      this.url = data.url
     })
   }
 }

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {Router} from '@angular/router'
 import {fromEvent} from 'rxjs'
 
 export interface HeaderClasses {
@@ -25,9 +26,7 @@ export class HeaderComponent implements OnInit {
   /** logo 图片地址 */
   public logoUrl = 'https://static.lifehelper.com.cn/static/project/logo.svg'
 
-  constructor() {
-    // 空
-  }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     // 监听滚动条滚动事件
@@ -46,5 +45,10 @@ export class HeaderComponent implements OnInit {
     } else if (distance === 0 && this.scrolled) {
       this.scrolled = false
     }
+  }
+
+  /** 跳转到「登录页」 */
+  goToLoginPage() {
+    this.router.navigate(['/login'])
   }
 }

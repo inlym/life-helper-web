@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core'
 import {SharedModule} from '../shared/shared.module'
 import {HomeComponent} from './home/home.component'
 import {LoginComponent} from './login/login.component'
+import {RouterModule} from '@angular/router'
 
 /**
  * 单页面模块
@@ -12,6 +13,6 @@ import {LoginComponent} from './login/login.component'
  */
 @NgModule({
   declarations: [HomeComponent, LoginComponent],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, RouterModule, SharedModule],
 })
 export class SinglePageModule {}
