@@ -16,7 +16,7 @@ import {environment} from 'src/environments/environment'
 export class SignatureInterceptor implements HttpInterceptor {
   private key: string
   private secret: string
-  private debug = true
+  private debug = false
 
   constructor() {
     this.key = environment.key
