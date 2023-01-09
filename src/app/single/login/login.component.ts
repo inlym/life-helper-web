@@ -8,13 +8,16 @@ import {LoginService} from './login.service'
 })
 export class LoginComponent implements OnInit {
   /** logo 图片地址 */
-  public logoUrl = 'https://static.lifehelper.com.cn/static/project/logo.svg'
+  logoUrl = 'https://static.lifehelper.com.cn/static/project/logo.svg'
 
   /** 扫码登录票据 ID */
-  public id = ''
+  id = ''
 
   /** 小程序码图片的 URL 地址 */
-  public url = ''
+  url = ''
+
+  /** 是否开启「下次自动登录」 */
+  autoLogin = true
 
   constructor(private loginService: LoginService) {}
 
@@ -22,11 +25,24 @@ export class LoginComponent implements OnInit {
     this.init()
   }
 
+  /** 初始化页面数据 */
+  private initPageData() {
+    this.id = ''
+    this.url = ''
+  }
+
   /** 页面初始化方法 */
-  init(): void {
+  private init(): void {
+    this.initPageData()
+
     this.loginService.getQrcode().subscribe((data) => {
       this.id = data.id
       this.url = data.url
     })
+  }
+
+  /** 「刷新」操作 */
+  public refresh() {
+    this.init()
   }
 }

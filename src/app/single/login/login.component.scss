@@ -3,7 +3,16 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #fafafa;
+
+// background-color: #fafafa;
+  background: linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%),
+  linear-gradient(
+  271.79deg,
+  rgba(0, 255, 253, .08) 1.78%,
+  rgba(236, 0, 255, .08) 50.15%,
+  rgba(255, 103, 0, .08) 98.8%
+  ),
+  rgb(255, 255, 255);
 
   .content {
     display: flex;
@@ -11,33 +20,66 @@
     flex-direction: column;
     width: 460px;
     height: 600px;
-    padding: 70px 80px;
+    padding: 60px 40px;
     border-radius: 10px;
     background-color: var(--ming-white);
     box-shadow: 0 4px 8px -4px rgb(0 0 0 / 13%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 12px 24px 16px rgb(0 0 0 / 4%);
 
-    .logo {
-      width: 40px;
-    }
-
     .name {
-      font-size: 22px;
-      margin-top: 14px;
+      font-family: serif;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 36px;
+      cursor: pointer;
+      text-align: center;
+      letter-spacing: 2px;
       color: var(--ming-text-title);
     }
 
     .desc {
+      font-size: 14px;
+      margin-top: 8px;
+      color: var(--ming-text-desc);
+    }
+
+    .tip {
       font-size: 16px;
-      margin-top: 6px;
+      margin-top: 80px;
       color: var(--ming-text-para);
     }
 
     .qrcode-area {
       position: relative;
-      margin-top: 50px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
 
       .qrcode {
-        width: 200px;
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    .refresh {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--ming-text-link);
+      }
+
+      .text {
+        font-size: 14px;
+      }
+
+      .material-icons {
+        font-size: 18px;
+        margin-top: -2px;
+        margin-left: 6px;
       }
     }
   }
