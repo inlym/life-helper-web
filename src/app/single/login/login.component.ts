@@ -60,14 +60,16 @@ export class LoginComponent implements OnInit {
 
       this.ob2 = interval(2000)
         .pipe(
-          mergeMap((v) => {
-            console.log(v)
+          mergeMap(() => {
             return this.loginService.check(this.id)
           })
         )
         .subscribe((data) => {
           if (data.scanned) {
             this.scanned = true
+          }
+          if (data.logined) {
+            this.ob2?.unsubscribe()
           }
         })
     })

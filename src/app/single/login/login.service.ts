@@ -1,6 +1,7 @@
 import {HttpClient} from '@angular/common/http'
 import {Injectable} from '@angular/core'
-import {SecurityToken} from 'src/app/core/services/token.service'
+import {tap} from 'rxjs'
+import {SecurityToken, TokenService} from 'src/app/core/services/token.service'
 
 /**
  * 登录服务
@@ -9,7 +10,7 @@ import {SecurityToken} from 'src/app/core/services/token.service'
  */
 @Injectable({providedIn: 'root'})
 export class LoginService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private tokenService: TokenService) {}
 
   /**
    * 获取用于「扫码登录」的小程序码信息
@@ -24,7 +25,13 @@ export class LoginService {
    * @param id 扫码登录凭据 ID
    */
   check(id: string) {
-    return this.http.post<ScanLoginResult>('/login/qrcode', {id})
+    return this.http.post<ScanLoginResult>('/login/qrcode', {id}).pipe(
+      tap((data: ScanLoginResult) => {
+        if (data.logined && data.securityToken) {
+          this.tokenService.save(data.securityToken)
+        }
+      })
+    )
   }
 }
 
