@@ -1,13 +1,15 @@
 import {CommonModule} from '@angular/common'
 import {HTTP_INTERCEPTORS} from '@angular/common/http'
 import {NgModule, Optional, SkipSelf} from '@angular/core'
-import {UrlTranslationInterceptor} from './interceptors/url-translation.interceptor'
 import {SignatureInterceptor} from './interceptors/signature.interceptor'
+import {TokenInterceptor} from './interceptors/token.interceptor'
+import {UrlTranslationInterceptor} from './interceptors/url-translation.interceptor'
 
 @NgModule({
   declarations: [],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: UrlTranslationInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: SignatureInterceptor, multi: true},
   ],
   imports: [CommonModule],

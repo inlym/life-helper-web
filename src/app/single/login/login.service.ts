@@ -1,6 +1,6 @@
 import {HttpClient} from '@angular/common/http'
 import {Injectable} from '@angular/core'
-import {SecurityToken} from 'src/app/core/services/auth.service'
+import {SecurityToken} from 'src/app/core/services/token.service'
 
 /**
  * 登录服务
