@@ -8,9 +8,6 @@ import {LoginService} from './login.service'
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  /** logo 图片地址 */
-  logoUrl = 'https://static.lifehelper.com.cn/static/project/logo.svg'
-
   /** 扫码登录票据 ID */
   id = ''
 
@@ -54,11 +51,11 @@ export class LoginComponent implements OnInit {
   private init(): void {
     this.initPageData()
 
-    this.ob1 = this.loginService.getQrcode().subscribe((data) => {
+    this.ob1 = this.loginService.getQrCodeTicket().subscribe((data) => {
       this.id = data.id
       this.url = data.url
 
-      this.ob2 = interval(2000)
+      this.ob2 = interval(1000)
         .pipe(
           mergeMap(() => {
             return this.loginService.check(this.id)
@@ -69,7 +66,9 @@ export class LoginComponent implements OnInit {
             this.scanned = true
           }
           if (data.logined) {
+            // 登录成功
             this.ob2?.unsubscribe()
+            console.log('登录成功')
           }
         })
     })
