@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {Router} from '@angular/router'
 import {Subscription, interval, mergeMap} from 'rxjs'
 import {LoginService} from './login.service'
 
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
   ob1?: Subscription
   ob2?: Subscription
 
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   ngOnInit(): void {
     this.init()
@@ -69,6 +70,7 @@ export class LoginComponent implements OnInit {
             // 登录成功
             this.ob2?.unsubscribe()
             console.log('登录成功')
+            this.router.navigate(['user', 'info'])
           }
         })
     })

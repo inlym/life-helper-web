@@ -8,6 +8,7 @@ import {AppComponent} from './app.component'
 import {CoreModule} from './core/core.module'
 import {SharedModule} from './shared/shared.module'
 import {SinglePageModule} from './single/single-page.module'
+import {UserModule} from './user/user.module'
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import {SinglePageModule} from './single/single-page.module'
     CoreModule,
     SharedModule,
     SinglePageModule,
+    UserModule,
   ],
   bootstrap: [AppComponent],
 })
