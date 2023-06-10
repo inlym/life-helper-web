@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router'
 import {MatCheckboxModule} from '@angular/material/checkbox'
 import {FormsModule} from '@angular/forms'
 import {MatIconModule} from '@angular/material/icon'
+import {TestComponent} from './test/test.component'
 
 /**
  * 单页面模块
@@ -15,7 +16,7 @@ import {MatIconModule} from '@angular/material/icon'
  * 将一些只有1个页面的模块声明到这个模块中，避免过于零散。
  */
 @NgModule({
-  declarations: [HomeComponent, LoginComponent],
+  declarations: [HomeComponent, LoginComponent, TestComponent],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule, MatCheckboxModule, MatIconModule],
 })
 export class SinglePageModule {}
