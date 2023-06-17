@@ -1,19 +1,12 @@
 import {HttpClient} from '@angular/common/http'
 import {Injectable} from '@angular/core'
+import {UserInfo} from './user-info.model'
 
-/**
- * 用户信息服务
- *
- * @since 2023.05.28
- */
 @Injectable({providedIn: 'root'})
-export class InfoService {
+export class UserInfoService {
   constructor(private http: HttpClient) {}
 
-  /**
-   * 获取用户信息
-   */
-  getUserInfo() {
-    return this.http.get('/userinfo')
+  public getUserInfo() {
+    return this.http.get<UserInfo>('/user/info')
   }
 }

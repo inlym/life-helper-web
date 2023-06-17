@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
-import {InfoComponent} from './info/info.component'
 import {SharedModule} from '../shared/shared.module'
+import {UserInfoComponent} from './user-info/user-info.component'
 
 @NgModule({
-  declarations: [InfoComponent],
+  declarations: [UserInfoComponent],
   imports: [CommonModule, SharedModule],
 })
 export class UserModule {}
