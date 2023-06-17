@@ -1,27 +1,42 @@
 import {HttpClient} from '@angular/common/http'
 import {Injectable} from '@angular/core'
-import {tap} from 'rxjs'
+import {Observable, tap, of} from 'rxjs'
 import {StorageKey} from '../enums/storage-key'
 
 /**
  * 用户信息服务
+ *
+ * ### 备注
+ * 当前用户信息服务会在全局用到，因此将服务提出来，放在公共部分。
  */
 @Injectable({providedIn: 'root'})
 export class UserInfoService {
   constructor(private http: HttpClient) {}
 
   /** 获取用户信息 */
-  get() {
-    return this.http.get<UserInfo>('/userinfo').pipe(
-      tap((data: UserInfo) => {
-        console.log(data)
-      })
-    )
+  get(): Observable<UserInfo> {
+    // 先从本地存储找，若有，则直接返回
+    const str = localStorage.getItem(StorageKey.USER_INFO)
+    if (str) {
+      return of(JSON.parse(str))
+    }
+
+    return this.update()
   }
 
-  /** 将用户信息存储至缓存中 */
-  save(userInfo: UserInfo) {
-    localStorage.setItem(StorageKey.USER_INFO, JSON.stringify(userInfo))
+  /**
+   * 更新本地存储的用户信息
+   *
+   * ### 备注
+   * 登录后，可能与之前是不同账号，因此需要在登录后强制更新一次。
+   */
+  update(): Observable<UserInfo> {
+    return this.http.get<UserInfo>('/userinfo').pipe(
+      tap((data: UserInfo) => {
+        // 获取后本地存储
+        localStorage.setItem(StorageKey.USER_INFO, JSON.stringify(data))
+      })
+    )
   }
 }
 
