@@ -1,4 +1,4 @@
-import {SecurityToken} from 'src/app/core/services/token.service'
+import {SecurityToken} from 'src/app/core/services/auth.service'
 
 /**
  * 二维码（小程序码）登录凭据

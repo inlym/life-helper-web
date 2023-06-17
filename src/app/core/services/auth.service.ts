@@ -17,28 +17,41 @@ export interface SecurityToken {
 }
 
 /**
- * 登录凭证服务
+ * 权限相关服务
  *
- * ### 主要用途
- * 用于登录状态管理。
+ * ### 说明
+ * 主要处理“登录凭证”的储存和使用。
+ *
+ * @since 2.0.0
+ * @date 2023/6/17
  */
 @Injectable({providedIn: 'root'})
-export class TokenService {
+export class AuthService {
   constructor(private logger: NGXLogger) {}
 
   /**
    * 存储登录凭证
    *
    * @param data 由服务器返回的整个登录凭证
+   *
+   * @since 2.0.0
+   * @date 2023/6/17
    */
-  save(data: SecurityToken): void {
-    localStorage.setItem(StorageKey.TOKEN, JSON.stringify(data))
+  saveToken(token: SecurityToken): void {
+    localStorage.setItem(StorageKey.TOKEN, JSON.stringify(token))
+    this.logger.info(`存储登录凭证 => ${JSON.stringify(token)}`)
   }
 
   /**
    * 获取登录凭证
+   *
+   * ###  注意事项
+   * 已经包含了对登录凭证的有效期校验，若过期，则返回为空。
+   *
+   * @since 2.0.0
+   * @date 2023/6/17
    */
-  get(): SecurityToken | null {
+  getToken(): SecurityToken | null {
     const str = localStorage.getItem(StorageKey.TOKEN)
     if (!str) {
       return null

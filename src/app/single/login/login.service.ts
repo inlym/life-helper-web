@@ -1,7 +1,8 @@
 import {HttpClient} from '@angular/common/http'
 import {Injectable} from '@angular/core'
+import {Router} from '@angular/router'
 import {tap} from 'rxjs'
-import {TokenService} from 'src/app/core/services/token.service'
+import {AuthService} from 'src/app/core/services/auth.service'
 import {QrCodeLoginResult, QrCodeTicket} from './login.model'
 
 /**
@@ -11,7 +12,7 @@ import {QrCodeLoginResult, QrCodeTicket} from './login.model'
  */
 @Injectable({providedIn: 'root'})
 export class LoginService {
-  constructor(private http: HttpClient, private tokenService: TokenService) {}
+  constructor(private http: HttpClient, private authService: AuthService, private router: Router) {}
 
   /**
    * 获取用于「扫码登录」的小程序码信息
@@ -29,7 +30,10 @@ export class LoginService {
     return this.http.post<QrCodeLoginResult>('/login/qrcode', {id}).pipe(
       tap((data: QrCodeLoginResult) => {
         if (data.logined && data.securityToken) {
-          this.tokenService.save(data.securityToken)
+          this.authService.saveToken(data.securityToken)
+
+          // 目前跳转到用户信息页
+          this.router.navigateByUrl('/user/info')
         }
       })
     )
