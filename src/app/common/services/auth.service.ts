@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core'
 import { storage, StorageItem } from '../core/storage'
 
 /** 登录凭证 */
-export interface SecurityToken {
+export interface IdentityCertificate {
   /** 鉴权令牌 */
   token: string
   /** 安全令牌类型 */
@@ -22,7 +22,7 @@ export interface SecurityToken {
  * @date 2023/11/19
  */
 @Injectable({ providedIn: 'root' })
-export class TokenService {
+export class AuthService {
   /**
    * 存储登录凭证
    * @param token 由服务器返回的整个登录凭证
@@ -30,7 +30,7 @@ export class TokenService {
    * @since 2.0.0
    * @date 2023/11/19
    */
-  save(token: SecurityToken): void {
+  saveCertificate(token: IdentityCertificate): void {
     storage.setItem(StorageItem.TOKEN, token)
   }
 
@@ -40,8 +40,8 @@ export class TokenService {
    * @since 2.0.0
    * @date 2023/11/19
    */
-  async get(): Promise<SecurityToken | null> {
-    const token = await storage.getItem<SecurityToken>(StorageItem.TOKEN)
+  getCertificate(): IdentityCertificate | null {
+    const token = storage.getItem<IdentityCertificate>(StorageItem.TOKEN)
     if (token && new Date(token.expireTime).getTime() > Date.now()) {
       return token
     }

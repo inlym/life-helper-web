@@ -1,19 +1,38 @@
-import localforage from 'localforage'
-import { environment } from '../../../environments/environment'
-
-export const storage = localforage.createInstance({
-  name: 'lifehelper',
-  storeName: environment.name,
-})
-
-// ================ 使用说明 ================
-// 所有缓存均需要在此处注册再使用，方便统一管理
-// ========================================
-
+/** 缓存使用的键名枚举 */
 export enum StorageItem {
   /** 用户登录鉴权凭证 */
   TOKEN = 'token',
-
   /** 用户信息 */
   USER_INFO = 'user_info',
 }
+
+/**
+ * 获取缓存值
+ * @param key 键名
+ *
+ * @since 2.0.0
+ * @date 2023/11/19
+ */
+function getItem<T>(key: StorageItem): T | null {
+  const str = localStorage.getItem(key)
+  if (str !== null) {
+    return JSON.parse(str)
+  }
+  return null
+}
+
+/**
+ * 设置缓存值
+ * @param key 键名
+ * @param value 键值，可以为任意值
+ *
+ * @since 2.0.0
+ * @date 2023/11/19
+ */
+function setItem(key: StorageItem, value: any): void {
+  if (value !== undefined && value !== null) {
+    localStorage.setItem(key, JSON.stringify(value))
+  }
+}
+
+export const storage = { getItem, setItem }

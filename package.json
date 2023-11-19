@@ -19,7 +19,6 @@
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
-    "localforage": "^1.10.0",
     "loglevel": "^1.8.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
