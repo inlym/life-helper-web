@@ -7,13 +7,12 @@ import { RouterOutlet } from '@angular/router'
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   template: '<router-outlet></router-outlet>',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // 主组件
+    // 主组件，仅提供路由，无模板
   }
 
   title = 'life-helper-web'
