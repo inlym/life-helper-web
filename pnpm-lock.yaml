@@ -8,6 +8,9 @@ dependencies:
   '@angular/animations':
     specifier: ^17.0.0
     version: registry.npmmirror.com/@angular/animations@17.0.3(@angular/core@17.0.3)
+  '@angular/cdk':
+    specifier: 17.0.1
+    version: registry.npmmirror.com/@angular/cdk@17.0.1(@angular/common@17.0.3)(@angular/core@17.0.3)(rxjs@7.8.1)
   '@angular/common':
     specifier: ^17.0.0
     version: registry.npmmirror.com/@angular/common@17.0.3(@angular/core@17.0.3)(rxjs@7.8.1)
@@ -20,6 +23,9 @@ dependencies:
   '@angular/forms':
     specifier: ^17.0.0
     version: registry.npmmirror.com/@angular/forms@17.0.3(@angular/common@17.0.3)(@angular/core@17.0.3)(@angular/platform-browser@17.0.3)(rxjs@7.8.1)
+  '@angular/material':
+    specifier: 17.0.1
+    version: registry.npmmirror.com/@angular/material@17.0.1(@angular/animations@17.0.3)(@angular/cdk@17.0.1)(@angular/common@17.0.3)(@angular/core@17.0.3)(@angular/forms@17.0.3)(@angular/platform-browser@17.0.3)(rxjs@7.8.1)
   '@angular/platform-browser':
     specifier: ^17.0.0
     version: registry.npmmirror.com/@angular/platform-browser@17.0.3(@angular/animations@17.0.3)(@angular/common@17.0.3)(@angular/core@17.0.3)
@@ -29,9 +35,6 @@ dependencies:
   '@angular/router':
     specifier: ^17.0.0
     version: registry.npmmirror.com/@angular/router@17.0.3(@angular/common@17.0.3)(@angular/core@17.0.3)(@angular/platform-browser@17.0.3)(rxjs@7.8.1)
-  '@types/crypto-js':
-    specifier: ^4.2.1
-    version: registry.npmmirror.com/@types/crypto-js@4.2.1
   crypto-js:
     specifier: ^4.2.0
     version: registry.npmmirror.com/crypto-js@4.2.0
@@ -58,6 +61,9 @@ devDependencies:
   '@angular/compiler-cli':
     specifier: ^17.0.0
     version: registry.npmmirror.com/@angular/compiler-cli@17.0.3(@angular/compiler@17.0.3)(typescript@5.2.2)
+  '@types/crypto-js':
+    specifier: ^4.2.1
+    version: registry.npmmirror.com/@types/crypto-js@4.2.1
   '@types/jasmine':
     specifier: ~5.1.0
     version: registry.npmmirror.com/@types/jasmine@5.1.2
@@ -333,6 +339,24 @@ packages:
       tslib: registry.npmmirror.com/tslib@2.6.2
     dev: false
 
+  registry.npmmirror.com/@angular/cdk@17.0.1(@angular/common@17.0.3)(@angular/core@17.0.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-0hrXm2D0s0/vUtDoLFRWTs75k5WY/hQmfnsaJXHeqinbE3eKOxmQxL1i7ymnMSQthEWzgRAhzS3Nfs7Alw3dQA==, tarball: https://registry.npmmirror.com/@angular/cdk/-/cdk-17.0.1.tgz}
+    id: registry.npmmirror.com/@angular/cdk/17.0.1
+    name: '@angular/cdk'
+    version: 17.0.1
+    peerDependencies:
+      '@angular/common': ^17.0.0 || ^18.0.0
+      '@angular/core': ^17.0.0 || ^18.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': registry.npmmirror.com/@angular/common@17.0.3(@angular/core@17.0.3)(rxjs@7.8.1)
+      '@angular/core': registry.npmmirror.com/@angular/core@17.0.3(rxjs@7.8.1)(zone.js@0.14.2)
+      rxjs: registry.npmmirror.com/rxjs@7.8.1
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    optionalDependencies:
+      parse5: registry.npmmirror.com/parse5@7.1.2
+    dev: false
+
   registry.npmmirror.com/@angular/cli@17.0.1:
     resolution: {integrity: sha512-3iJWw+bpr/8y1ZY1m0wGfukffQVmD6DJUNubB297NCq1bJyUj+uwBuDnpIH+vidJvPBEEY+9XPJr0Jnd6+i7rg==, tarball: https://registry.npmmirror.com/@angular/cli/-/cli-17.0.1.tgz}
     name: '@angular/cli'
@@ -448,6 +472,77 @@ packages:
       '@angular/common': registry.npmmirror.com/@angular/common@17.0.3(@angular/core@17.0.3)(rxjs@7.8.1)
       '@angular/core': registry.npmmirror.com/@angular/core@17.0.3(rxjs@7.8.1)(zone.js@0.14.2)
       '@angular/platform-browser': registry.npmmirror.com/@angular/platform-browser@17.0.3(@angular/animations@17.0.3)(@angular/common@17.0.3)(@angular/core@17.0.3)
+      rxjs: registry.npmmirror.com/rxjs@7.8.1
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@angular/material@17.0.1(@angular/animations@17.0.3)(@angular/cdk@17.0.1)(@angular/common@17.0.3)(@angular/core@17.0.3)(@angular/forms@17.0.3)(@angular/platform-browser@17.0.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-avicxHCJAeg26Tg8z6+g54tMTQZPP5kaaRmkd97QGtJn3wKiAen6WOgmEhlrA4jPJ71CsdyxcUruEX+BHB6X4Q==, tarball: https://registry.npmmirror.com/@angular/material/-/material-17.0.1.tgz}
+    id: registry.npmmirror.com/@angular/material/17.0.1
+    name: '@angular/material'
+    version: 17.0.1
+    peerDependencies:
+      '@angular/animations': ^17.0.0 || ^18.0.0
+      '@angular/cdk': 17.0.1
+      '@angular/common': ^17.0.0 || ^18.0.0
+      '@angular/core': ^17.0.0 || ^18.0.0
+      '@angular/forms': ^17.0.0 || ^18.0.0
+      '@angular/platform-browser': ^17.0.0 || ^18.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/animations': registry.npmmirror.com/@angular/animations@17.0.3(@angular/core@17.0.3)
+      '@angular/cdk': registry.npmmirror.com/@angular/cdk@17.0.1(@angular/common@17.0.3)(@angular/core@17.0.3)(rxjs@7.8.1)
+      '@angular/common': registry.npmmirror.com/@angular/common@17.0.3(@angular/core@17.0.3)(rxjs@7.8.1)
+      '@angular/core': registry.npmmirror.com/@angular/core@17.0.3(rxjs@7.8.1)(zone.js@0.14.2)
+      '@angular/forms': registry.npmmirror.com/@angular/forms@17.0.3(@angular/common@17.0.3)(@angular/core@17.0.3)(@angular/platform-browser@17.0.3)(rxjs@7.8.1)
+      '@angular/platform-browser': registry.npmmirror.com/@angular/platform-browser@17.0.3(@angular/animations@17.0.3)(@angular/common@17.0.3)(@angular/core@17.0.3)
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/auto-init': registry.npmmirror.com/@material/auto-init@15.0.0-canary.a246a4439.0
+      '@material/banner': registry.npmmirror.com/@material/banner@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/button': registry.npmmirror.com/@material/button@15.0.0-canary.a246a4439.0
+      '@material/card': registry.npmmirror.com/@material/card@15.0.0-canary.a246a4439.0
+      '@material/checkbox': registry.npmmirror.com/@material/checkbox@15.0.0-canary.a246a4439.0
+      '@material/chips': registry.npmmirror.com/@material/chips@15.0.0-canary.a246a4439.0
+      '@material/circular-progress': registry.npmmirror.com/@material/circular-progress@15.0.0-canary.a246a4439.0
+      '@material/data-table': registry.npmmirror.com/@material/data-table@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dialog': registry.npmmirror.com/@material/dialog@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/drawer': registry.npmmirror.com/@material/drawer@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/fab': registry.npmmirror.com/@material/fab@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/floating-label': registry.npmmirror.com/@material/floating-label@15.0.0-canary.a246a4439.0
+      '@material/form-field': registry.npmmirror.com/@material/form-field@15.0.0-canary.a246a4439.0
+      '@material/icon-button': registry.npmmirror.com/@material/icon-button@15.0.0-canary.a246a4439.0
+      '@material/image-list': registry.npmmirror.com/@material/image-list@15.0.0-canary.a246a4439.0
+      '@material/layout-grid': registry.npmmirror.com/@material/layout-grid@15.0.0-canary.a246a4439.0
+      '@material/line-ripple': registry.npmmirror.com/@material/line-ripple@15.0.0-canary.a246a4439.0
+      '@material/linear-progress': registry.npmmirror.com/@material/linear-progress@15.0.0-canary.a246a4439.0
+      '@material/list': registry.npmmirror.com/@material/list@15.0.0-canary.a246a4439.0
+      '@material/menu': registry.npmmirror.com/@material/menu@15.0.0-canary.a246a4439.0
+      '@material/menu-surface': registry.npmmirror.com/@material/menu-surface@15.0.0-canary.a246a4439.0
+      '@material/notched-outline': registry.npmmirror.com/@material/notched-outline@15.0.0-canary.a246a4439.0
+      '@material/radio': registry.npmmirror.com/@material/radio@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/segmented-button': registry.npmmirror.com/@material/segmented-button@15.0.0-canary.a246a4439.0
+      '@material/select': registry.npmmirror.com/@material/select@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/slider': registry.npmmirror.com/@material/slider@15.0.0-canary.a246a4439.0
+      '@material/snackbar': registry.npmmirror.com/@material/snackbar@15.0.0-canary.a246a4439.0
+      '@material/switch': registry.npmmirror.com/@material/switch@15.0.0-canary.a246a4439.0
+      '@material/tab': registry.npmmirror.com/@material/tab@15.0.0-canary.a246a4439.0
+      '@material/tab-bar': registry.npmmirror.com/@material/tab-bar@15.0.0-canary.a246a4439.0
+      '@material/tab-indicator': registry.npmmirror.com/@material/tab-indicator@15.0.0-canary.a246a4439.0
+      '@material/tab-scroller': registry.npmmirror.com/@material/tab-scroller@15.0.0-canary.a246a4439.0
+      '@material/textfield': registry.npmmirror.com/@material/textfield@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tooltip': registry.npmmirror.com/@material/tooltip@15.0.0-canary.a246a4439.0
+      '@material/top-app-bar': registry.npmmirror.com/@material/top-app-bar@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
       rxjs: registry.npmmirror.com/rxjs@7.8.1
       tslib: registry.npmmirror.com/tslib@2.6.2
     dev: false
@@ -2665,6 +2760,758 @@ packages:
       call-bind: registry.npmmirror.com/call-bind@1.0.5
     dev: true
 
+  registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-0eV06UGYeuFwC/4t+yjg3LCRGRLq72ybBtJYzcBDpP4ASTjie0WmpAOFJYXRq2U5X/yxLviDMhpRemoSUjgZ0Q==, tarball: https://registry.npmmirror.com/@material/animation/-/animation-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/animation'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/auto-init@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-0QfmjT5elQ10hCxToVgq/WaC3301tVH1sJaO3O2yocVzr7s6iWm8/zch16V5hcHzQHbtcT3Rf4y1ZzmdNys2Iw==, tarball: https://registry.npmmirror.com/@material/auto-init/-/auto-init-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/auto-init'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/banner@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-PBLgH7JEbEpTkLy33oyWXUhIFmSsdOrR6Gn6qIgQRo1qrnk5RSBGW2gEq4Z6793vjxM107gKudDb23E4Fcu4vg==, tarball: https://registry.npmmirror.com/@material/banner/-/banner-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/banner'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/button': registry.npmmirror.com/@material/button@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-/ob3v3IFU8q2gGdVNWw5kNPjW2mRTeBIz1YdhGWUmRxKn2Kl8bdLOvrAmZtQMmPn/4cGXvinxpec/zVBWQKDkA==, tarball: https://registry.npmmirror.com/@material/base/-/base-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/base'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/button@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-rGpVRde0Aqhv2t9QvT8Zl3HvG89BeUNPOpgfpaLBZ4SGGAO4rIrckl/eCENibKgmmdCKcYZlG9gc5abQVPfUvw==, tarball: https://registry.npmmirror.com/@material/button/-/button-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/button'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/card@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-+rYUnBPgv5QVF6BeUs3toIRdSwFVohGmjk2ptTXMZkKxqAJt7Nr9Znbm3Ym2hD8GUHJeh3pyGFvEs6rG6JMYAw==, tarball: https://registry.npmmirror.com/@material/card/-/card-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/card'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/checkbox@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-sQwHzm1TSxHUoPrqplWTk/BhyzdDhzcwlbucwJK9W0o9WXMDk+d9PvcCxpP/9sAnVqZk42BfE89Y0T1DHglZ9A==, tarball: https://registry.npmmirror.com/@material/checkbox/-/checkbox-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/checkbox'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/chips@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-TiV9WJ5taEHPGWPhXbxJvUJhLzThg+VpK7aAlvL4RurtmJ7pURuEdRS4Z6o0OEqi3wKQ4z/+K44kZUn/+9HALg==, tarball: https://registry.npmmirror.com/@material/chips/-/chips-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/chips'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/checkbox': registry.npmmirror.com/@material/checkbox@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      safevalues: registry.npmmirror.com/safevalues@0.3.4
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/circular-progress@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-+QTfyExPWzgm2tqMInd32qQOftsC1b8MUhAhZSfuecYBfqAc7KZkQEKa2nm4y8EHKMFWe8/DcxLV6IxMBLgHwA==, tarball: https://registry.npmmirror.com/@material/circular-progress/-/circular-progress-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/circular-progress'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/progress-indicator': registry.npmmirror.com/@material/progress-indicator@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/data-table@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-89qVOjR7gqby6fsmh7tKj29SjQ2sGLXu2IzCeX3Vni4mz+xxo5dv11jxYNADvdgJDfhyDJFPh1FlqAH7O09nFA==, tarball: https://registry.npmmirror.com/@material/data-table/-/data-table-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/data-table'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/checkbox': registry.npmmirror.com/@material/checkbox@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/icon-button': registry.npmmirror.com/@material/icon-button@15.0.0-canary.a246a4439.0
+      '@material/linear-progress': registry.npmmirror.com/@material/linear-progress@15.0.0-canary.a246a4439.0
+      '@material/list': registry.npmmirror.com/@material/list@15.0.0-canary.a246a4439.0
+      '@material/menu': registry.npmmirror.com/@material/menu@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/select': registry.npmmirror.com/@material/select@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-h8BJVCWkPR97WeWCN6/atVbSOP8J4+ZbbssidcwsnX7b3+3IaWdtBxGii25dsILX8pUVwwqxVis24y211b+8rg==, tarball: https://registry.npmmirror.com/@material/density/-/density-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/density'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/dialog@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-4lyxd+5ccOEMUGKzZcssaYyzkCsYTpYCSQSANR0toQPLv3voDwKMfA709uZI6+nL7Re6Xdf7jx8qe+QpTTjVcw==, tarball: https://registry.npmmirror.com/@material/dialog/-/dialog-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/dialog'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/button': registry.npmmirror.com/@material/button@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/icon-button': registry.npmmirror.com/@material/icon-button@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-AftSOGQoQg/Ys2kOVjZzvqWmsnhg3Kam/2UC4Gj0DMMCu36J4MAoD+3PpnOd1aG3wiJKtUXR2vPIwE8I/PM9yg==, tarball: https://registry.npmmirror.com/@material/dom/-/dom-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/dom'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/drawer@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-/JUmbzRBaikdbZ250yA9ZTPqp2W5nGvvuHYoNVAAmtOmxuwGvvNNpWiVZy2lIYeYcf1hA7hJ5mEQxs0aSD7iWQ==, tarball: https://registry.npmmirror.com/@material/drawer/-/drawer-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/drawer'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/list': registry.npmmirror.com/@material/list@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-lwPIOb8fHyOljIWYcVLPT73dPIEOKat/CXu6gqYIVMQgZQIksQNUA7z1O3l7apkRSuYUOYSXqrgU7AnWP4KcJg==, tarball: https://registry.npmmirror.com/@material/elevation/-/elevation-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/elevation'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/fab@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-XUex3FNqxPD1i/4jITucB/RWTNkkdv52mbNmwrvbuThZlhuhyH9GzOQYTDop/b2783TPcv++xr8UUbuh8GWYzA==, tarball: https://registry.npmmirror.com/@material/fab/-/fab-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/fab'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-/SU9X5y8CRp6RS9qnjnM/N5qfsJ8bYILpR841eZmN6DLqMupaM9Yy7Mx8+v/QvpBLLhk+jmu79nFzwkwW54d6Q==, tarball: https://registry.npmmirror.com/@material/feature-targeting/-/feature-targeting-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/feature-targeting'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/floating-label@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-832qZ/qxKx0KUatoeVY3Q2NmboVgiWBG0/1VsbJyodHrgQWfnBOHgLE+M322o6uM3OhvO+kWm4iYbvwhmLZGsw==, tarball: https://registry.npmmirror.com/@material/floating-label/-/floating-label-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/floating-label'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-ar0BtACFS3K14k/enAg0ePeEA/f/RJY4Ji4L/00Dw/B3XVpNRbqLH49jkcbtcQjdTS0FEyk2sWSNMZl6wVi0/A==, tarball: https://registry.npmmirror.com/@material/focus-ring/-/focus-ring-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/focus-ring'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+    dev: false
+
+  registry.npmmirror.com/@material/form-field@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-Q/+ErgtAUFUPPUmWA1m5IP5voiN8XjPRwyoAlFxSTa/4t+EA5B18Z8Bsn9b6I0AC8RHke06H7UWrKz8XUDIFpw==, tarball: https://registry.npmmirror.com/@material/form-field/-/form-field-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/form-field'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/icon-button@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-Igyo94rkIlqC91BR1Tv+WLTz1ZWcZZjl1xU7Vsx8mbWA1PnaRDUTNVV5LFi4e0ORp6GSblFTImpHngEy4agMEg==, tarball: https://registry.npmmirror.com/@material/icon-button/-/icon-button-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/icon-button'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/image-list@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-Rcj3q7Tp7Nwbe5ht6ptTc3zqK8TSDJHaPDBf+kzi0kkh6MAB4qoHPgn+HnA+zIZ79CScU56bN7zjA6XYaZvsLw==, tarball: https://registry.npmmirror.com/@material/image-list/-/image-list-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/image-list'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/layout-grid@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-bkfxZuVzgtjEJgR3n8pvDQbe88ffULDJ5d2DF34IR8SOiRmQcj7UzqAt95XwIUcWlfisLCoIryP4U8XSpFb1EQ==, tarball: https://registry.npmmirror.com/@material/layout-grid/-/layout-grid-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/layout-grid'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/line-ripple@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-20WmwRrejmtOdI37+959UqEVIjbMtAXlkDOkfCIA3OUhp+oZSjVkCqKxI16jxxVlnzJ353fy8xeSKzOHe4sExQ==, tarball: https://registry.npmmirror.com/@material/line-ripple/-/line-ripple-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/line-ripple'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/linear-progress@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-IcCd4476pXHloTYadHDJ+2c2lntoVigeNnQEiD/ASQTKqKrJqkIdvvczFm9Ryu+V2+TKhp7vvQGFLUMaLPcmhw==, tarball: https://registry.npmmirror.com/@material/linear-progress/-/linear-progress-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/linear-progress'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/progress-indicator': registry.npmmirror.com/@material/progress-indicator@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/list@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-4H5dKIjCUGIPmKjfcegV0SBybD5NNdHp26OU6sovvWIvxSGQtDJr6z9I7i+0vF/HIS5ScbHD2+9/txtL80iqCA==, tarball: https://registry.npmmirror.com/@material/list/-/list-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/list'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/menu-surface@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-4h4wZ0Rs7qBg1Otldw8ljp+LCULNL42pqbqcTXhKAkJM7pHcSw4k7IfoThSRLU3+V8T3/+qiAXyeQix2OGHzwg==, tarball: https://registry.npmmirror.com/@material/menu-surface/-/menu-surface-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/menu-surface'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/menu@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-2HOHQAIdWQtXjSvEIrW3lnbcIwFf5XaQhFzCEZ04FcSGApc4iLwsmRFVW3PzWx+mVrUrEfO/K42DVULIX9J1Pg==, tarball: https://registry.npmmirror.com/@material/menu/-/menu-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/menu'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/list': registry.npmmirror.com/@material/list@15.0.0-canary.a246a4439.0
+      '@material/menu-surface': registry.npmmirror.com/@material/menu-surface@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/notched-outline@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-zmRZHJ+5cOWsBatRyK50wuht78olXySyKOJIIEmy8lxSMZefI1764u0mr8tS1KYF8vSAl5cUlwCC3/2Njz1FPg==, tarball: https://registry.npmmirror.com/@material/notched-outline/-/notched-outline-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/notched-outline'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/floating-label': registry.npmmirror.com/@material/floating-label@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/progress-indicator@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-92HM5niUnqG5Y3M/xkscBD+2lkaWPDcIRPo0RHPYcyldL+EhWRv/sdQpfdiXw/h3uvKSowKxBMCHm8krAyf+sQ==, tarball: https://registry.npmmirror.com/@material/progress-indicator/-/progress-indicator-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/progress-indicator'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/radio@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-on8EVztWXc/ajcaowFZ31ClGADYxQrhj4ulMne0NxdHHWQ44ttf5aXOVqtv5mxeOzrRACOkQyTUXBG07yTWCEQ==, tarball: https://registry.npmmirror.com/@material/radio/-/radio-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/radio'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-Vl615/PIBpBD+IOI9Xypz0SV3RsmYJYSNx890Rih7irhUOaPsOUBmTYOWF5AsGBynqLcXoTNVhK92drYLKtJwQ==, tarball: https://registry.npmmirror.com/@material/ripple/-/ripple-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/ripple'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-pgJFw8ZRpWGpwv7ZuBTJ+WdNmFBKoLVoMbbxKQWTHXVwhAqn3aoIq95o62T5QeEG/+sguNShdquG45CpAMmSRw==, tarball: https://registry.npmmirror.com/@material/rtl/-/rtl-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/rtl'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/segmented-button@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-oqGHs2C7C+yJW/xZf/wP8jBGLs6HcerhM3CsorLAEMH3MGuIlVC17WcisBewEWucsILYEWbySXy/7T4h6/psZA==, tarball: https://registry.npmmirror.com/@material/segmented-button/-/segmented-button-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/segmented-button'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/touch-target': registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/select@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-odoNLiVOgdwbEeePkjHtlr43pjskDwyO8hi4z3jcud1Rg1czk5zoJ2mUI0+olOJjBQ26PGocwrSLqf3qaThbIA==, tarball: https://registry.npmmirror.com/@material/select/-/select-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/select'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/floating-label': registry.npmmirror.com/@material/floating-label@15.0.0-canary.a246a4439.0
+      '@material/line-ripple': registry.npmmirror.com/@material/line-ripple@15.0.0-canary.a246a4439.0
+      '@material/list': registry.npmmirror.com/@material/list@15.0.0-canary.a246a4439.0
+      '@material/menu': registry.npmmirror.com/@material/menu@15.0.0-canary.a246a4439.0
+      '@material/menu-surface': registry.npmmirror.com/@material/menu-surface@15.0.0-canary.a246a4439.0
+      '@material/notched-outline': registry.npmmirror.com/@material/notched-outline@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-rcWPlCoHyP79ozeEKk73KWt9WTWdh6R68+n75l08TSTvnWZB5RRTmsI9BMkz55O9OJD/8H8ZsOxBe4x2QXUT7w==, tarball: https://registry.npmmirror.com/@material/shape/-/shape-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/shape'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/slider@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-is1BSBpxaXBBv+wSVpe9WGWmWl59yJEeDNubTES2UFD0er3BmA+PdKkL09vvytDnBcbKf77TbxaRiUSGVaKUQA==, tarball: https://registry.npmmirror.com/@material/slider/-/slider-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/slider'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/snackbar@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-2NAtC1qozR/uajszZnPy08Ej8HNnpgvCjNCBerDN4SLH2Q0/aWrVrUjqRCp2ayAvsX+szoroGbCboMhaWRzDuQ==, tarball: https://registry.npmmirror.com/@material/snackbar/-/snackbar-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/snackbar'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/button': registry.npmmirror.com/@material/button@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/icon-button': registry.npmmirror.com/@material/icon-button@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/switch@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-o0wcbYgm2yRs4een5uxT4RJnJ003DxXe33rk8vTBG2o7cdiSR3X7GJQxeIK3D9wPgWCAwBLhNYSzXrlTL5pkMw==, tarball: https://registry.npmmirror.com/@material/switch/-/switch-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/switch'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      safevalues: registry.npmmirror.com/safevalues@0.3.4
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/tab-bar@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-dMQb1vXsBchQXcjbwgJZIGqTZHngm+3QGSOSb4LWjqHIgC5+w2RRrHsIAjNTyRhKssJ9nKKrbpM/Yz5vTPWH6w==, tarball: https://registry.npmmirror.com/@material/tab-bar/-/tab-bar-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/tab-bar'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/tab': registry.npmmirror.com/@material/tab@15.0.0-canary.a246a4439.0
+      '@material/tab-indicator': registry.npmmirror.com/@material/tab-indicator@15.0.0-canary.a246a4439.0
+      '@material/tab-scroller': registry.npmmirror.com/@material/tab-scroller@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/tab-indicator@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-gG2BgHT+ggKnUOaT8LjmH/+9nknRLh8v9qemrhUkDuCtZ8inlaC33OVbbxfrpQW3J+UzBh5YCUSC+2KrN39uUA==, tarball: https://registry.npmmirror.com/@material/tab-indicator/-/tab-indicator-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/tab-indicator'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/tab-scroller@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-6KvBpalc4SwLbHFm0rnuIE64VffUj7AKhnPc+mqM6VmxOvDzQ/ZSYga0rWlUfM4mCDFX3ZkSxim+iNzVF+Ejaw==, tarball: https://registry.npmmirror.com/@material/tab-scroller/-/tab-scroller-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/tab-scroller'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/tab': registry.npmmirror.com/@material/tab@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/tab@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-HGLK774uMeLnhbjDJBOjft7S6SurZnKb+6Und88OMDUVUEG6MkFBAKQQr09iBIeLE2sUAiGQhBVQtb7LJKwolQ==, tarball: https://registry.npmmirror.com/@material/tab/-/tab-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/tab'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/focus-ring': registry.npmmirror.com/@material/focus-ring@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/tab-indicator': registry.npmmirror.com/@material/tab-indicator@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/textfield@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-4BW5bUERPlIeiPnLSby21h1/xDmySuAG9Ucn1LM801a0+5mK3IwWb8031AP3filKZZqTx5JJvOJYZd6/OWBJVA==, tarball: https://registry.npmmirror.com/@material/textfield/-/textfield-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/textfield'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/density': registry.npmmirror.com/@material/density@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/floating-label': registry.npmmirror.com/@material/floating-label@15.0.0-canary.a246a4439.0
+      '@material/line-ripple': registry.npmmirror.com/@material/line-ripple@15.0.0-canary.a246a4439.0
+      '@material/notched-outline': registry.npmmirror.com/@material/notched-outline@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-HWxC5Nhz8JZKTLTVmAsNxIGB3Kzr53+YFMg327S8/XuEDmI0RFHFvtwM9rADmyrHFBmUaVhV4iELyxFdi67c9w==, tarball: https://registry.npmmirror.com/@material/theme/-/theme-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/theme'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-+5iGfQ51YSb0Qau8uC6/jHXCSC3enKaQKDf/iPHfuXAe04UznW3tmm1/Ju227aZXNISTJcnQYa2rpm1M14MeUg==, tarball: https://registry.npmmirror.com/@material/tokens/-/tokens-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/tokens'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+    dev: false
+
+  registry.npmmirror.com/@material/tooltip@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-Ja2Z4aZQkYWD6InXA+MG4M9zdKR6dYsXXlYzQppYpfcQzXylZqh5Y7WBLulG5fA2o83pHVwILfwFZM7j7ht08Q==, tarball: https://registry.npmmirror.com/@material/tooltip/-/tooltip-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/tooltip'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/button': registry.npmmirror.com/@material/button@15.0.0-canary.a246a4439.0
+      '@material/dom': registry.npmmirror.com/@material/dom@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/tokens': registry.npmmirror.com/@material/tokens@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      safevalues: registry.npmmirror.com/safevalues@0.3.4
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/top-app-bar@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-twQchmCa1In/FFrALPYojgeM8vmV7KH96wRY9NmPSJ046ANgPCicLBgLuSzrLETCFqAwbztqzxSG4xMBL81rYg==, tarball: https://registry.npmmirror.com/@material/top-app-bar/-/top-app-bar-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/top-app-bar'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/animation': registry.npmmirror.com/@material/animation@15.0.0-canary.a246a4439.0
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/elevation': registry.npmmirror.com/@material/elevation@15.0.0-canary.a246a4439.0
+      '@material/ripple': registry.npmmirror.com/@material/ripple@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/shape': registry.npmmirror.com/@material/shape@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      '@material/typography': registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/touch-target@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-ubyD1TUjZnRPEdDnk6Lrcm2ZsjnU7CV5y7IX8pj9IPawiM6bx4FkjZBxUvclbv3WiTGk5UOnwPOySYAJYAMQ1w==, tarball: https://registry.npmmirror.com/@material/touch-target/-/touch-target-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/touch-target'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/base': registry.npmmirror.com/@material/base@15.0.0-canary.a246a4439.0
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/rtl': registry.npmmirror.com/@material/rtl@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
+  registry.npmmirror.com/@material/typography@15.0.0-canary.a246a4439.0:
+    resolution: {integrity: sha512-eXzBl9ROzWZ+41nan5pCrn1C/Zq3o/VsrLFaGv8fdRmhRR6/wHMeuvCCwGf5VtEmWdAE9FpJzRU/4ZPiJCJUyg==, tarball: https://registry.npmmirror.com/@material/typography/-/typography-15.0.0-canary.a246a4439.0.tgz}
+    name: '@material/typography'
+    version: 15.0.0-canary.a246a4439.0
+    dependencies:
+      '@material/feature-targeting': registry.npmmirror.com/@material/feature-targeting@15.0.0-canary.a246a4439.0
+      '@material/theme': registry.npmmirror.com/@material/theme@15.0.0-canary.a246a4439.0
+      tslib: registry.npmmirror.com/tslib@2.6.2
+    dev: false
+
   registry.npmmirror.com/@ngtools/webpack@17.0.1(@angular/compiler-cli@17.0.3)(typescript@5.2.2)(webpack@5.89.0):
     resolution: {integrity: sha512-IfiWIBY1GntfJFV/U1CSOHZ7zF5p0zFMFzux7/iGXUXit299LTdJ5mZTe9++lFcH6dPHgEPWlinuYAfzorY4ng==, tarball: https://registry.npmmirror.com/@ngtools/webpack/-/webpack-17.0.1.tgz}
     id: registry.npmmirror.com/@ngtools/webpack/17.0.1
@@ -2930,7 +3777,7 @@ packages:
     resolution: {integrity: sha512-FSPGd9+OcSok3RsM0UZ/9fcvMOXJ1ENE/ZbLfOPlBWj7BgXtEAM8VYfTtT760GiLbQIMoVozwVuisjvsVwqYWw==, tarball: https://registry.npmmirror.com/@types/crypto-js/-/crypto-js-4.2.1.tgz}
     name: '@types/crypto-js'
     version: 4.2.1
-    dev: false
+    dev: true
 
   registry.npmmirror.com/@types/eslint-scope@3.7.7:
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==, tarball: https://registry.npmmirror.com/@types/eslint-scope/-/eslint-scope-3.7.7.tgz}
@@ -5036,7 +5883,6 @@ packages:
     name: entities
     version: 4.5.0
     engines: {node: '>=0.12'}
-    dev: true
 
   registry.npmmirror.com/env-paths@2.2.1:
     resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==, tarball: https://registry.npmmirror.com/env-paths/-/env-paths-2.2.1.tgz}
@@ -8097,7 +8943,6 @@ packages:
     version: 7.1.2
     dependencies:
       entities: registry.npmmirror.com/entities@4.5.0
-    dev: true
 
   registry.npmmirror.com/parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==, tarball: https://registry.npmmirror.com/parseurl/-/parseurl-1.3.3.tgz}
@@ -8842,6 +9687,12 @@ packages:
     name: safer-buffer
     version: 2.1.2
     dev: true
+
+  registry.npmmirror.com/safevalues@0.3.4:
+    resolution: {integrity: sha512-LRneZZRXNgjzwG4bDQdOTSbze3fHm1EAKN/8bePxnlEZiBmkYEDggaHbuvHI9/hoqHbGfsEA7tWS9GhYHZBBsw==, tarball: https://registry.npmmirror.com/safevalues/-/safevalues-0.3.4.tgz}
+    name: safevalues
+    version: 0.3.4
+    dev: false
 
   registry.npmmirror.com/sass-loader@13.3.2(sass@1.69.5)(webpack@5.89.0):
     resolution: {integrity: sha512-CQbKl57kdEv+KDLquhC+gE3pXt74LEAzm+tzywcA0/aHZuub8wTErbjAoNI57rPUWRYRNC5WUnNl8eGJNbDdwg==, tarball: https://registry.npmmirror.com/sass-loader/-/sass-loader-13.3.2.tgz}
