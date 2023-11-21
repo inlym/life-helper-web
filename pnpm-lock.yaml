@@ -29,6 +29,12 @@ dependencies:
   '@angular/router':
     specifier: ^17.0.0
     version: registry.npmmirror.com/@angular/router@17.0.3(@angular/common@17.0.3)(@angular/core@17.0.3)(@angular/platform-browser@17.0.3)(rxjs@7.8.1)
+  '@types/crypto-js':
+    specifier: ^4.2.1
+    version: registry.npmmirror.com/@types/crypto-js@4.2.1
+  crypto-js:
+    specifier: ^4.2.0
+    version: registry.npmmirror.com/crypto-js@4.2.0
   loglevel:
     specifier: ^1.8.1
     version: registry.npmmirror.com/loglevel@1.8.1
@@ -2920,6 +2926,12 @@ packages:
       '@types/node': registry.npmmirror.com/@types/node@20.9.1
     dev: true
 
+  registry.npmmirror.com/@types/crypto-js@4.2.1:
+    resolution: {integrity: sha512-FSPGd9+OcSok3RsM0UZ/9fcvMOXJ1ENE/ZbLfOPlBWj7BgXtEAM8VYfTtT760GiLbQIMoVozwVuisjvsVwqYWw==, tarball: https://registry.npmmirror.com/@types/crypto-js/-/crypto-js-4.2.1.tgz}
+    name: '@types/crypto-js'
+    version: 4.2.1
+    dev: false
+
   registry.npmmirror.com/@types/eslint-scope@3.7.7:
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==, tarball: https://registry.npmmirror.com/@types/eslint-scope/-/eslint-scope-3.7.7.tgz}
     name: '@types/eslint-scope'
@@ -4555,6 +4567,12 @@ packages:
       shebang-command: registry.npmmirror.com/shebang-command@2.0.0
       which: registry.npmmirror.com/which@2.0.2
     dev: true
+
+  registry.npmmirror.com/crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==, tarball: https://registry.npmmirror.com/crypto-js/-/crypto-js-4.2.0.tgz}
+    name: crypto-js
+    version: 4.2.0
+    dev: false
 
   registry.npmmirror.com/css-functions-list@3.2.1:
     resolution: {integrity: sha512-Nj5YcaGgBtuUmn1D7oHqPW0c9iui7xsTsj5lIX8ZgevdfhmjFfKB3r8moHJtNJnctnYXJyYX5I1pp90HM4TPgQ==, tarball: https://registry.npmmirror.com/css-functions-list/-/css-functions-list-3.2.1.tgz}
