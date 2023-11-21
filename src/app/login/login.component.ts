@@ -2,9 +2,12 @@ import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 import { Subscription, interval, mergeMap } from 'rxjs'
 import { LoginService } from './login.service'
+import { MatIconModule } from '@angular/material/icon'
 
 @Component({
   selector: 'app-login',
+  standalone: true,
+  imports: [MatIconModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })

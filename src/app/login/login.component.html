@@ -8,15 +8,19 @@
         <div class="qrcode-area">
             <img [src]="url" class="qrcode" />
             <!-- 已扫码情况浮层 -->
-            <div class="scanned" *ngIf="scanned">
+            @if (scanned) {
+            <div class="scanned">
                 <div class="material-icons">check_circle</div>
                 <div class="text">已扫码，请在手机上确认</div>
-            </div>
+            </div> }
+
             <!-- 小程序码失效情况 -->
-            <div class="invalid" *ngIf="invalid" (click)="refresh()">
+            @if (invalid) {
+            <div class="invalid" (click)="refresh()">
                 <div class="material-icons">error</div>
                 <div class="text">已失效，请刷新重试</div>
-            </div>
+            </div>}
+
         </div>
 
         <!-- 刷新 -->
