@@ -3,9 +3,103 @@
 html,
 body {
   height: 100%;
+  font-family: -apple-system-font, BlinkMacSystemFont, Roboto, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei UI', 'Microsoft YaHei', Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4706;
+  color: var(--ming-text-title);
+  letter-spacing: -0.022em;
+  background-color: #fff;
 }
 
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// 全局变量
+// 所有的变量均以 `--ming-` 前缀作为开头，避免在引入第三方变量时导致冲突
+:root {
+  // ================================== 常规颜色 ==================================
+  // 红色
+  --ming-red: #fa5151;
+
+  // 橙色
+  --ming-orange: #fa9d3b;
+
+  // 黄色
+  --ming-yellow: #ffc300;
+
+  // 绿色
+  --ming-green: #00c06c;
+
+  // 浅绿色
+  --ming-lightgreen: #95ec69;
+
+  // 蓝色
+  --ming-blue: #10aeff;
+
+  // 蓝紫色
+  --ming-indigo: #1485ee;
+
+  // 紫色
+  --ming-purple: #6467f0;
+
+  // 白色
+  --ming-white: #fff;
+
+  // 黑色
+  --ming-black: #000;
+
+  // ================================== 状态颜色 ==================================
+  // 成功状态颜色
+  --ming-success: var(--ming-green);
+
+  // 警告状态颜色
+  --ming-warning: #ffc300;
+
+  // 错误状态颜色
+  --ming-error: #fa5151;
+
+  // ================================== 字体颜色 ==================================
+  // 标题字体颜色
+  --ming-text-title: #353535;
+
+  // 段落字体颜色
+  --ming-text-para: #585a5a;
+
+  // 描述性字体颜色
+  --ming-text-desc: #8a8f8d;
+
+  // 跳转链接字体颜色
+  --ming-text-link: #576b95;
+
+  // ================================== 背景颜色 ==================================
+  // 基础背景色（最大块的）
+  --ming-bg-0: #ededed;
+
+  // 小模块背景色
+  --ming-bg-1: #f7f7f7;
+
+  // 大模块背景色
+  --ming-bg-2: #fff;
+
+  // =================================== 其他 ===================================
+  // 顶部导航栏高度
+  --ming-header-height: 60px;
+}
+
+// 单元素垂直水平居中（该类放在父元素上）
+.one-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 通用页面容器（宽度最大的容器）
+.common-container {
+  width: 1280px;
+  margin: 0 auto;
 }

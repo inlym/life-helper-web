@@ -1,0 +1,19 @@
+<!-- 顶部导航栏 -->
+<div class="header one-center" [class.scrolled]="scrolled">
+    <div class="header-content common-container">
+        <div class="left">
+            <img [src]="logoUrl" class="logo" />
+            <div class="title">小鸣助手</div>
+        </div>
+        <div class="space"></div>
+        <div class="menus">
+            <div class="menu-item active">首页</div>
+            <div class="menu-item">天气</div>
+            <div class="menu-item">纪念日</div>
+        </div>
+        <div class="space"></div>
+        <div class="right">
+            <button mat-flat-button color="primary" (click)="goToLoginPage()">登录</button>
+        </div>
+    </div>
+</div>

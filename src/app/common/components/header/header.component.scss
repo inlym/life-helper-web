@@ -1,0 +1,56 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: var(--ming-header-height);
+  background-color: transparent;
+  transition: all 0.5s linear;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .space {
+      flex: 1;
+    }
+
+    .left {
+      display: flex;
+
+      .logo {
+        width: 26px;
+        margin-right: 16px;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .menus {
+      display: flex;
+      font-size: 18px;
+
+      .menu-item {
+        height: var(--ming-header-height);
+        padding: 0 10px;
+        margin: 0 50px;
+        line-height: var(--ming-header-height);
+      }
+
+      .active {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// 滚动条距离顶部 >0px 情况，做了样式强化
+.scrolled {
+  background-color: var(--ming-bg-2);
+  box-shadow: 0 10px 40px -15px rgb(64 90 163 / 20%);
+}
