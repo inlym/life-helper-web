@@ -43,3 +43,6 @@ Thumbs.db
 
 # Config files
 src/environments/environment.prod.ts
+
+# Others
+pnpm-lock.yaml
