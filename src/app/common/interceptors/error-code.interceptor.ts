@@ -1,7 +1,7 @@
 import {HttpInterceptorFn} from '@angular/common/http'
 import {inject} from '@angular/core'
 import {Router} from '@angular/router'
-import {catchError, of, throwError} from 'rxjs'
+import {catchError, throwError} from 'rxjs'
 
 /** 错误码处理拦截器 */
 export const errorCodeInterceptor: HttpInterceptorFn = (req, next) => {
