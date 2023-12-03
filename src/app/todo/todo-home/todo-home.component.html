@@ -16,7 +16,7 @@
         <div class="projects-area">
             <div class="header">
                 <div class="title">清单({{ projectList.length }})</div>
-                <mat-icon fontIcon="add"></mat-icon>
+                <button mat-icon-button><mat-icon>add</mat-icon></button>
             </div>
             <div class="list">
                 @for (item of projectList; track $index) {
@@ -24,8 +24,22 @@
                 }
             </div>
         </div>
+
+        <!-- 分割线 -->
+        <div class="divider"></div>
+
         <!-- 标签区 -->
-        <div class="tag-area"></div>
+        <div class="tags-area">
+            <div class="header">
+                <div class="title">标签({{ tagList.length }})</div>
+                <button mat-icon-button><mat-icon>add</mat-icon></button>
+            </div>
+            <div class="list">
+                @for (item of tagList; track $index) {
+                    <div class="item">{{ item.id }} - {{ item.name }}</div>
+                }
+            </div>
+        </div>
     </div>
     <!-- 中间任务列表区 -->
     <div class="list">2</div>

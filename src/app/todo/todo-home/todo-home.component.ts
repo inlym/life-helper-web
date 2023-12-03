@@ -3,11 +3,12 @@ import {Component, OnInit} from '@angular/core'
 import {MatIconModule} from '@angular/material/icon'
 import {Project, Tag} from './todo.model'
 import {TodoService} from './todo.service'
+import {MatButtonModule} from '@angular/material/button'
 
 @Component({
   selector: 'app-todo-home',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule],
   templateUrl: './todo-home.component.html',
   styleUrl: './todo-home.component.scss',
 })

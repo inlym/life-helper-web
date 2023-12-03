@@ -7,7 +7,7 @@
   // 左侧菜单栏
   .menu {
     padding: 10px;
-    width: 300px;
+    width: 260px;
     background-color: #e5e5e5;
 
     // 分割线
@@ -25,8 +25,14 @@
       }
     }
 
-    .projects-area {
-      margin-top: 20px;
+    .projects-area,
+    .tags-area {
+      .header {
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
 }
