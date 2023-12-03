@@ -8,13 +8,25 @@
   .menu {
     padding: 10px;
     width: 300px;
-    background-color: aqua;
+    background-color: #e5e5e5;
+
+    // 分割线
+    .divider {
+      height: 1px;
+      background-color: #d1d1d1;
+      margin: 10px 0;
+    }
 
     // 快捷操作区
     .shortcut {
       .item {
-        margin: 4px;
+        height: 60px;
+        line-height: 60px;
       }
+    }
+
+    .projects-area {
+      margin-top: 20px;
     }
   }
 }

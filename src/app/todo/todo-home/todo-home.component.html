@@ -8,20 +8,21 @@
             <div class="item">明天</div>
             <div class="item">最近7天</div>
         </div>
+
+        <!-- 分割线 -->
+        <div class="divider"></div>
+
         <!-- 待办清单列表区 -->
         <div class="projects-area">
-            <mat-expansion-panel (opened)="true">
-                <!-- 顶部区域 -->
-                <mat-expansion-panel-header>
-                    <mat-panel-title> 清单（{{projectList.length}}） </mat-panel-title>
-                </mat-expansion-panel-header>
-                <!-- 列表区域 -->
-                <mat-list role="list">
-                    @for (item of projectList; track $index) {
-                    <mat-list-item role="listitem">{{item.id}} - {{item.name}}</mat-list-item>
-                    }
-                </mat-list>
-            </mat-expansion-panel>
+            <div class="header">
+                <div class="title">清单({{ projectList.length }})</div>
+                <mat-icon fontIcon="add"></mat-icon>
+            </div>
+            <div class="list">
+                @for (item of projectList; track $index) {
+                    <div class="item">{{ item.id }} - {{ item.name }}</div>
+                }
+            </div>
         </div>
         <!-- 标签区 -->
         <div class="tag-area"></div>
