@@ -3,9 +3,9 @@ import {Component, OnInit} from '@angular/core'
 import {MatButtonModule} from '@angular/material/button'
 import {MatDialog, MatDialogModule} from '@angular/material/dialog'
 import {MatIconModule} from '@angular/material/icon'
+import {ProjectEditingDialogComponent} from '../project-editing-dialog/project-editing-dialog.component'
 import {Project, Tag} from './todo.model'
 import {TodoService} from './todo.service'
-import {ProjectEditingDialogComponent} from '../project-editing-dialog/project-editing-dialog.component'
 
 @Component({
   selector: 'app-todo-home',
@@ -36,7 +36,7 @@ export class TodoHomeComponent implements OnInit {
   /** 打开项目编辑弹窗 */
   openProjectEditingDialog() {
     const dialogRef = this.dialog.open(ProjectEditingDialogComponent, {
-      data: {name: 'mark', id: 111},
+      data: {},
     })
 
     dialogRef.afterClosed().subscribe((data) => console.log(data))

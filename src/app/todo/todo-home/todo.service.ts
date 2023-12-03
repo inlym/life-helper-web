@@ -1,10 +1,19 @@
+import {HttpClient} from '@angular/common/http'
 import {Injectable} from '@angular/core'
-import {Project, Tag} from './todo.model'
 import {of} from 'rxjs'
+import {Project, Tag} from './todo.model'
 
 @Injectable({providedIn: 'root'})
 export class TodoService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
+
+  /**
+   * 添加待办清单
+   * @param name 清单名称
+   */
+  addProject(name: string) {
+    return this.http.post('/todo/project', {name})
+  }
 
   getProjectList() {
     const list: Project[] = [

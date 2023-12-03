@@ -1,8 +1,15 @@
-<h2 mat-dialog-title>添加清单</h2>
+<!-- 弹窗标题 -->
+@if (isNew) {
+    <h2 mat-dialog-title>添加清单</h2>
+} @else {
+    <h2 mat-dialog-title>编辑清单</h2>
+}
+
 <mat-dialog-content class="mat-typography">
     <mat-form-field appearance="outline">
         <mat-label>名称</mat-label>
         <input matInput [(ngModel)]="name" placeholder="请输入清单名称" />
+        <mat-hint align="start">请输入清单名称，最多10字</mat-hint>
     </mat-form-field>
     <mat-dialog-actions align="end">
         <button mat-button mat-dialog-close>取消</button>

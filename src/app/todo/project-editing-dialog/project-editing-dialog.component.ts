@@ -5,6 +5,8 @@ import {MatButtonModule} from '@angular/material/button'
 import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog'
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
+import {ProjectEditingDialogInputData} from './project-editing-dialog.model'
+import {TodoService} from '../todo-home/todo.service'
 
 @Component({
   selector: 'app-project-editing-dialog',
@@ -16,13 +18,20 @@ import {MatInputModule} from '@angular/material/input'
 export class ProjectEditingDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<ProjectEditingDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
-  ) {}
+    @Inject(MAT_DIALOG_DATA) public data: ProjectEditingDialogInputData,
+    private todoService: TodoService
+  ) {
+    this.isNew = !data.id
+    this.name = data.name
+  }
+
+  /** 是否是“新建” */
+  isNew: boolean = true
 
   /** 清单名称 */
   name: string = ''
 
   confirm() {
-    console.log(`点击了「确定」, name=${this.name}`)
+    this.todoService.addProject(this.name).subscribe((data) => console.log(data))
   }
 }
