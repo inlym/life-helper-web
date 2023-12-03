@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>添加清单</h2>
+<mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="outline">
+        <mat-label>名称</mat-label>
+        <input matInput [(ngModel)]="name" placeholder="请输入清单名称" />
+    </mat-form-field>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>取消</button>
+        <button mat-raised-button color="primary" [mat-dialog-close]="name" cdkFocusInitial (click)="confirm()">
+            确定
+        </button>
+    </mat-dialog-actions>
+</mat-dialog-content>

@@ -6,6 +6,9 @@ export interface Project {
   name: string
 }
 
+/** 专用于编辑框使用的数据格式 */
+export type EditedProject = Pick<Project, 'id' | 'name'>
+
 /** 待办任务 */
 export interface Task {
   /** 任务 ID */

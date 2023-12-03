@@ -16,7 +16,7 @@
         <div class="projects-area">
             <div class="header">
                 <div class="title">清单({{ projectList.length }})</div>
-                <button mat-icon-button><mat-icon>add</mat-icon></button>
+                <button mat-icon-button (click)="openProjectEditingDialog()"><mat-icon>add</mat-icon></button>
             </div>
             <div class="list">
                 @for (item of projectList; track $index) {
