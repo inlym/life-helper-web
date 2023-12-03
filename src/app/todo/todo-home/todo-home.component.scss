@@ -1,0 +1,20 @@
+// 最外层的容器
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  // 左侧菜单栏
+  .menu {
+    padding: 10px;
+    width: 300px;
+    background-color: aqua;
+
+    // 快捷操作区
+    .shortcut {
+      .item {
+        margin: 4px;
+      }
+    }
+  }
+}

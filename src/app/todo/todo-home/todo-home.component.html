@@ -1,1 +1,33 @@
-<p>todo-home works!</p>
+<div class="container">
+    <!-- 左侧菜单栏 -->
+    <div class="menu">
+        <!-- 快捷操作区 -->
+        <div class="shortcut">
+            <div class="item">所有</div>
+            <div class="item">今天</div>
+            <div class="item">明天</div>
+            <div class="item">最近7天</div>
+        </div>
+        <!-- 待办清单列表区 -->
+        <div class="projects-area">
+            <mat-expansion-panel (opened)="true">
+                <!-- 顶部区域 -->
+                <mat-expansion-panel-header>
+                    <mat-panel-title> 清单（{{projectList.length}}） </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!-- 列表区域 -->
+                <mat-list role="list">
+                    @for (item of projectList; track $index) {
+                    <mat-list-item role="listitem">{{item.id}} - {{item.name}}</mat-list-item>
+                    }
+                </mat-list>
+            </mat-expansion-panel>
+        </div>
+        <!-- 标签区 -->
+        <div class="tag-area"></div>
+    </div>
+    <!-- 中间任务列表区 -->
+    <div class="list">2</div>
+    <!-- 右侧任务详情区 -->
+    <div class="detail">3</div>
+</div>
