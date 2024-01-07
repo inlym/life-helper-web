@@ -1,0 +1,38 @@
+// 最外层的容器
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  // 左侧菜单栏
+  .menu {
+    padding: 10px;
+    width: 260px;
+    background-color: #e5e5e5;
+
+    // 分割线
+    .divider {
+      height: 1px;
+      background-color: #d1d1d1;
+      margin: 10px 0;
+    }
+
+    // 快捷操作区
+    .shortcut {
+      .item {
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+
+    .projects-area,
+    .tags-area {
+      .header {
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
