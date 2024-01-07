@@ -16,7 +16,7 @@
 
 ## 💡 项目特点
 
-1. 线上正式运行的项目，不是 demo，历经 4 年，久经用户考验。
+1. 线上正式运行的项目，不是 demo，历经 5 年，久经用户考验。
 2. 开发尽量遵照业界最佳实践，可作为学习样板。
 3. 跟随版本更新，包含 Java、Spring Boot 等，尽量使用**最新稳定版**，保持技术栈不落后。
 
@@ -70,19 +70,19 @@ life-helper-server
 
 ## 🚀 技术栈
 
-|     技术栈      | 链接                                        |
-| :-------------: | ------------------------------------------- |
-|   Spring Boot   | https://spring.io/projects/spring-boot      |
-| Spring Security | https://spring.io/projects/spring-security  |
-|     Lombok      | https://www.projectlombok.org/              |
-|      Maven      | https://maven.apache.org/                   |
-|     MyBatis     | https://mybatis.org/mybatis-3/zh/index.html |
-|     Docker      | https://www.docker.com/                     |
-|      MySQL      | https://www.mysql.com/cn/                   |
-|      Redis      | https://redis.io/                           |
-|      Druid      | https://druid.apache.org/                   |
-|       JWT       | https://jwt.io/                             |
-|     Swagger     | https://swagger.io/                         |
+|     技术栈      | 链接                                          |
+| :-------------: | --------------------------------------------- |
+|   Spring Boot   | <https://spring.io/projects/spring-boot>      |
+| Spring Security | <https://spring.io/projects/spring-security>  |
+|     Lombok      | <https://www.projectlombok.org/>              |
+|      Maven      | <https://maven.apache.org/>                   |
+|     MyBatis     | <https://mybatis.org/mybatis-3/zh/index.html> |
+|     Docker      | <https://www.docker.com/>                     |
+|      MySQL      | <https://www.mysql.com/cn/>                   |
+|      Redis      | <https://redis.io/>                           |
+|      Druid      | <https://druid.apache.org/>                   |
+|       JWT       | <https://jwt.io/>                             |
+|     Swagger     | <https://swagger.io/>                         |
 
 ## ❓ 常见问题
 
