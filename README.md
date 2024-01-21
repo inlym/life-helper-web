@@ -44,8 +44,7 @@
 （2）方案二：以功能划分。这种方案的核心点在于以“功能”的角度，将同业务模块的代码文件放在一起，例如不管是控制器还是服务类，只要是商品模块的代码文件，都放到 `goods`
 目录下。
 
-笔者在项目实践中，采用的是“**方案二**
-”，笔者认为在大型项目中，方案二更容易维护。以下是当前项目（[life-helper-server](https://github.com/inlym/life-helper-server)）的目录结构（_todo_）。
+笔者在项目实践中，采用的是“**方案二**”，笔者认为在大型项目中，方案二更容易维护。以下是当前项目（[life-helper-server](https://github.com/inlym/life-helper-server)）的目录结构（_todo_）。
 
 ```markdown
 life-helper-server
